@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
 import VideoSolutions from "../Pages/VideoSolutions/VideoSolutions";
+import Feedback from "../Pages/Feedback/Feedback";
 
 export const router = createBrowserRouter([
   {
@@ -8,24 +9,28 @@ export const router = createBrowserRouter([
     element: <Main />,
     children: [
       {
-        path: "/",
+        path: "/profile",
         element: <div>Home Page</div>,
       },
       {
-        path: "/study-materials",
+        path: "/profile/study-materials",
         element: <div>study</div>,
       },
       {
-        path: "/video-solutions",
-        element: <VideoSolutions/>,
+        path: "/profile/video-solutions",
+        element: <VideoSolutions />,
       },
       {
-        path: "/practice-test",
+        path: "/profile/practice-test",
         element: <div>Practice Test</div>,
       },
       {
-        path: "/exam-centre",
+        path: "/profile/exam-centre",
         element: <div>Exam Centre</div>,
+      },
+      {
+        path: "/profile/feedback",
+        element: <Feedback />,
       },
       {
         // 404 not found

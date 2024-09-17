@@ -1,9 +1,9 @@
 import searchIcon from "../assets/images/search-normal.svg";
-import avatar from '../assets/images/avatar.svg'
+import avatar from "../assets/images/avatar.svg";
 
 const NavbarShared = ({ search }) => {
   return (
-    <div className=" mb-11 flex items-center  justify-between">
+    <div className="  flex items-center  justify-between">
       {/* search start */}
       {search && (
         <div className="relative">
@@ -24,7 +24,7 @@ const NavbarShared = ({ search }) => {
       {/* search end */}
 
       {/* avatar */}
-      <div>
+      <div className="flex justify-end  w-full">
         <img src={avatar} alt="avatar" />
       </div>
     </div>

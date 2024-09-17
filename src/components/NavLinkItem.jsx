@@ -13,7 +13,7 @@ const NavLinkItem = () => {
           className={({ isActive }) =>
             isActive ? `${baseStyle} ${activeClass}` : baseStyle
           }
-          to="/"
+          to="/profile"
         >
           {({ isActive }) => (
             <>
@@ -78,7 +78,7 @@ const NavLinkItem = () => {
           className={({ isActive }) =>
             isActive ? `${baseStyle} ${activeClass}` : baseStyle
           }
-          to="/study-materials"
+          to="/profile/study-materials"
         >
           {({ isActive }) => (
             <>
@@ -139,7 +139,7 @@ const NavLinkItem = () => {
           className={({ isActive }) =>
             isActive ? `${baseStyle} ${activeClass}` : baseStyle
           }
-          to="/video-solutions"
+          to="/profile/video-solutions"
         >
           {({ isActive }) => (
             <>
@@ -188,7 +188,7 @@ const NavLinkItem = () => {
           className={({ isActive }) =>
             isActive ? `${baseStyle} ${activeClass}` : baseStyle
           }
-          to="/practice-test"
+          to="/profile/practice-test"
         >
           {({ isActive }) => (
             <>
@@ -249,7 +249,7 @@ const NavLinkItem = () => {
           className={({ isActive }) =>
             isActive ? `${baseStyle} ${activeClass}` : baseStyle
           }
-          to="/exam-centre"
+          to="/profile/exam-centre"
         >
           <span>
             <svg
@@ -317,7 +317,7 @@ const NavLinkItem = () => {
           className={({ isActive }) =>
             isActive ? `${baseStyle} ${activeClass}` : baseStyle
           }
-          to="/results"
+          to="/profile/results"
         >
           {({ isActive }) => (
             <>
@@ -374,7 +374,7 @@ const NavLinkItem = () => {
           className={({ isActive }) =>
             isActive ? `${baseStyle} ${activeClass}` : baseStyle
           }
-          to="/ladder-ranking"
+          to="/profile/ladder-ranking"
         >
           {({ isActive }) => (
             <>
@@ -435,7 +435,7 @@ const NavLinkItem = () => {
           className={({ isActive }) =>
             isActive ? `${baseStyle} ${activeClass}` : baseStyle
           }
-          to="/timetable"
+          to="/profile/timetable"
         >
           {({ isActive }) => (
             <>
@@ -504,7 +504,7 @@ const NavLinkItem = () => {
           className={({ isActive }) =>
             isActive ? `${baseStyle} ${activeClass}` : baseStyle
           }
-          to="/membership"
+          to="/profile/membership"
         >
           {({ isActive }) => (
             <>
@@ -602,7 +602,7 @@ const NavLinkItem = () => {
           className={({ isActive }) =>
             isActive ? `${baseStyle} ${activeClass}` : baseStyle
           }
-          to="/about"
+          to="/profile/about"
         >
           {({ isActive }) => (
             <>
@@ -687,7 +687,7 @@ const NavLinkItem = () => {
           className={({ isActive }) =>
             isActive ? `${baseStyle} ${activeClass}` : baseStyle
           }
-          to="/faq"
+          to="/profile/faq"
         >
           {({ isActive }) => (
             <>
@@ -740,7 +740,7 @@ const NavLinkItem = () => {
           className={({ isActive }) =>
             isActive ? `${baseStyle} ${activeClass}` : baseStyle
           }
-          to="/feedback"
+          to="/profile/feedback"
         >
           {({ isActive }) => (
             <>
@@ -801,7 +801,7 @@ const NavLinkItem = () => {
           className={({ isActive }) =>
             isActive ? `${baseStyle} ${activeClass}` : baseStyle
           }
-          to="/forum"
+          to="/profile/forum"
         >
           {({ isActive }) => (
             <>
@@ -854,7 +854,7 @@ const NavLinkItem = () => {
           className={({ isActive }) =>
             isActive ? `${baseStyle} ${activeClass}` : baseStyle
           }
-          to="/contact"
+          to="/profile/contact"
         >
           {({ isActive }) => (
             <>

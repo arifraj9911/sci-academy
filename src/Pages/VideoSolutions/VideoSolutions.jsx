@@ -4,6 +4,7 @@ import arrowBtn from "../../assets/images/arrow.svg";
 import filterViewsIcon from "../../assets/images/filter_views.svg";
 import arrowRight from "../../assets/images/arrow_right.svg";
 import arrowLeft from "../../assets/images/Arrow_Left_LG.svg";
+import threeDot from "../../assets/images/More_Vertical.svg";
 import videosData from "../../data/videosData";
 import "./VideoSolutions.css";
 
@@ -28,7 +29,7 @@ const VideoSolutions = () => {
       <NavbarShared search={true} />
       {/* navbar end */}
 
-      <div>
+      <div className="mt-11">
         <h3 className="text-[32px] text-primary-heading font-semibold font-poppins ">
           Video Solutions
         </h3>
@@ -184,9 +185,10 @@ const VideoSolutions = () => {
         {viewSelected === "List View" && (
           <div className=" mb-8 gap-4 flex flex-col  ">
             {videosData?.map((video) => (
-              <div
+              <div key={video?.id} className="flex justify-between">
+                <div
                 className=" w-full gap gap-6 flex items-center"
-                key={video?.id}
+                
               >
                 <iframe
                   className="rounded-lg w-1/3 "
@@ -200,15 +202,17 @@ const VideoSolutions = () => {
                     {video?.subject_title}
                   </h4>
                   <div className="mt-4 mb-6 text-primary-text flex items-center gap-2 text-[16px]">
-                    <span>{video?.subject_name} </span>
-                    <span className="dot-before">{video?.total_views}</span>
-                    <span className="dot-before">{video?.uploaded_time}</span>
-                  </div>
+                      <span>{video?.subject_name} </span>
+                      <span className="dot-before">{video?.total_views}</span>
+                      <span className="dot-before">{video?.uploaded_time}</span>
+                    </div>
                   <button className="font-poppins flex items-center gap-3 text-[#111928] font-semibold">
                     View Details
                     <img src={arrowLeft} alt="arrow_right" />
                   </button>
                 </div>
+              </div>
+              <img src={threeDot} alt="three_dot" />
               </div>
             ))}
           </div>

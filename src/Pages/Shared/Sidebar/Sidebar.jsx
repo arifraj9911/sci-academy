@@ -5,7 +5,7 @@ import NavLinkItem from "../../../components/NavLinkItem";
 
 const Sidebar = () => {
   return (
-    <div className="p-6">
+    <div className="p-6 min-h-screen sticky top-0 ">
       {/* logo */}
       <div className="flex items-center gap-2">
         <img src={logo} alt="logo" />
