@@ -6,8 +6,20 @@ import NavbarButton from "./NavbarButton";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [nav, setNav] = useState("");
+  window.addEventListener("scroll", () => {
+    if (scrollY > 120) {
+      setNav("bg-white px-4 py-2 rounded-b-md shadow-sm");
+    } else {
+      setNav("");
+    }
+  });
   return (
-    <nav className="navbar justify-between">
+    <nav
+      className={`w-[1440px] flex items-center justify-between fixed left-[50%] -translate-x-[50%] top-0 z-[1000] ${nav} ${
+        !nav && "pb-8 bg-transparent"
+      }`}
+    >
       <Link to={"/"}>
         <img src={Logo} alt="logo" className="w-[190px]" />
       </Link>

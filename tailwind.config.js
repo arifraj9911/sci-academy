@@ -16,6 +16,8 @@ export default {
         "gray-dark":"#212121",
         "primary-blue":"#3758f9",
         "ebony_clay":"#1F2A37",
+        "pale_sky":"#637381",
+        "zircon":"#F6F9FF",
       },
       maxWidth: {
         "screen-mak": "1900px",
