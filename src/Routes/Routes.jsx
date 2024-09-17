@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
 import VideoSolutions from "../Pages/VideoSolutions/VideoSolutions";
 import Feedback from "../Pages/Feedback/Feedback";
+import About from "../Pages/About/About";
 
 export const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ export const router = createBrowserRouter([
       {
         path: "/profile/exam-centre",
         element: <div>Exam Centre</div>,
+      },
+      {
+        path: "/profile/about",
+        element: <About />,
       },
       {
         path: "/profile/feedback",
