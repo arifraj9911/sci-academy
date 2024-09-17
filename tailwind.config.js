@@ -13,6 +13,9 @@ export default {
         "primary-text": "#637381",
         "secondary-text": "#8899A8",
         "active-menu": "#111928",
+        "gray-dark":"#212121",
+        "primary-blue":"#3758f9",
+        "ebony_clay":"#1F2A37",
       },
       maxWidth: {
         "screen-mak": "1900px",
@@ -20,6 +23,9 @@ export default {
       },
       minWidth:{
         "min-screen-desktop":"1440px"
+      },
+      backgroundImage:{
+        'hero-pattern':"url('./src/assets/header-bg.svg')"
       }
     },
   },
