@@ -1,5 +1,6 @@
 import Courses from "../components/home/Courses";
 import Header from "../components/home/Header";
+import Testimonials from "../components/home/Testimonials";
 import WhyChooseUs from "../components/home/WhyChooseUs";
 import Navbar from "../components/Navbar";
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
           <Courses />
         </div>
       </div>
+      <Testimonials/>
     </div>
   );
 };
