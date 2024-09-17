@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
+import VideoSolutions from "../Pages/VideoSolutions/VideoSolutions";
 
 export const router = createBrowserRouter([
   {
@@ -16,7 +17,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/video-solutions",
-        element: <div>Video</div>,
+        element: <VideoSolutions/>,
       },
       {
         path: "/practice-test",
