@@ -27,7 +27,7 @@ const Feedback = () => {
       {/* navbar end */}
 
       {/* feedback div */}
-      <div className="border p-8 rounded-3xl w-1/2 mx-auto mt-3">
+      <div className="border p-8 rounded-3xl w-3/5 mx-auto mt-3">
         {/* feedback header start */}
         <div className="flex gap-4">
           <div className="border rounded-lg p-4">

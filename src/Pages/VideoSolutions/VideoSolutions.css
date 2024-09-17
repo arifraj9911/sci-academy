@@ -1,8 +1,0 @@
-.dot-before::before {
-    content: '•'; /* Dot character */
-    color: #637381; /* Or any color you prefer */
-    display: inline-block;
-    margin-right: 0.1rem;
-     /* Adjust spacing between dot and text */
-     font-size: 20px;
-  }

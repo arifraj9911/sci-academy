@@ -1,7 +1,7 @@
 import searchIcon from "../assets/images/search-normal.svg";
 import avatar from "../assets/images/avatar.svg";
 
-const NavbarShared = ({ search, about }) => {
+const NavbarShared = ({ search, about,practice }) => {
   return (
     <div className="  flex items-center  justify-between">
       {/* search start */}
@@ -44,6 +44,13 @@ const NavbarShared = ({ search, about }) => {
             <span className="text-lg font-poppins font-semibold">250P</span>
           </div>
         )}
+
+        {
+          practice && <button className="capitalize text-[#3758F9] font-poppins py-3 px-6 border border-[#3758F9] rounded-2xl mr-6">
+          Become a member
+        </button>
+        }
+        
 
         <img src={avatar} alt="avatar" />
       </div>

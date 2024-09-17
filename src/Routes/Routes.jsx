@@ -3,6 +3,7 @@ import Main from "../layout/Main";
 import VideoSolutions from "../Pages/VideoSolutions/VideoSolutions";
 import Feedback from "../Pages/Feedback/Feedback";
 import About from "../Pages/About/About";
+import PracticeTest from "../Pages/PracticeTest/PracticeTest";
 
 export const router = createBrowserRouter([
   {
@@ -23,7 +24,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/profile/practice-test",
-        element: <div>Practice Test</div>,
+        element: <PracticeTest />,
       },
       {
         path: "/profile/exam-centre",
