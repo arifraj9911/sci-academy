@@ -2,6 +2,8 @@ import { useState } from "react";
 import NavbarShared from "../../components/NavbarShared";
 import arrowBtn from "../../assets/images/arrow.svg";
 import filterViewsIcon from "../../assets/images/filter_views.svg";
+import arrowRight from "../../assets/images/arrow_right.svg";
+import videosData from "../../data/videosData";
 
 const categories = ["All", "Tests", "Exams", "Textbook"];
 const courses = ["CSE", "EEE", "ICT", "CIVIL"];
@@ -151,6 +153,27 @@ const VideoSolutions = () => {
           </div>
         </div>
         {/* filtering options end*/}
+
+        <hr className="my-8" />
+
+        {/* video section */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 2xl:grid-cols-4 mb-8 gap-4">
+          {videosData?.map((video) => (
+            <div className=" w-full" key={video.id}>
+              <iframe
+                className="rounded-t-lg w-full "
+                // width="354"
+                height="246"
+                src={video.youtube_link}
+                allowFullScreen
+              ></iframe>
+              <button className="bg-[#111928CC] -mt-[1px] flex items-center font-poppins font-semibold text-left rounded-b-lg py-2 gap-2 w-full   px-6 text-white">
+                View Details
+                <img src={arrowRight} alt="arrow_right" />
+              </button>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
