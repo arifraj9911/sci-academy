@@ -16,7 +16,7 @@ const WhyChooseUs = () => {
       <div className=" mt-[3.75rem] flex items-center gap-20">
         <div className="w-[59rem] h-auto relative">
           <img src={wcs} alt="wcs img" />
-          <button className=" absolute z-10 top-1/2 left-1/2 -translate-x-1/2 ">
+          <button className=" absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
             <img src={playButton} alt="play button" />
           </button>
         </div>

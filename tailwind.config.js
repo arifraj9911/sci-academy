@@ -18,6 +18,8 @@ export default {
         "ebony_clay":"#1F2A37",
         "pale_sky":"#637381",
         "zircon":"#F6F9FF",
+        "boulder":"#767676",
+        "sky_blue":"#3758F91A",
       },
       maxWidth: {
         "screen-mak": "1900px",
