@@ -6,10 +6,15 @@ import About from "../Pages/About/About";
 import PracticeTest from "../Pages/PracticeTest/PracticeTest";
 import SelectMaterial from "../Pages/PracticeTest/SelectMaterial/SelectMaterial";
 import ContentSummery from "../Pages/PracticeTest/ContentSummery/ContentSummery";
+import Home from "../pages/Home";
 
 export const router = createBrowserRouter([
   {
     path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/profile",
     element: <Main />,
     children: [
       {

@@ -13,6 +13,14 @@ export default {
         "primary-text": "#637381",
         "secondary-text": "#8899A8",
         "active-menu": "#111928",
+        "gray-dark":"#212121",
+        "primary-blue":"#3758f9",
+        "ebony_clay":"#1F2A37",
+        "pale_sky":"#637381",
+        "zircon":"#F6F9FF",
+        "boulder":"#767676",
+        "sky_blue":"#3758F91A",
+        "mystic":"#DFE4EA",
       },
       maxWidth: {
         "screen-mak": "1900px",
@@ -20,6 +28,9 @@ export default {
       },
       minWidth:{
         "min-screen-desktop":"1440px"
+      },
+      backgroundImage:{
+        'hero-pattern':"url('./src/assets/header-bg.svg')"
       }
     },
   },
