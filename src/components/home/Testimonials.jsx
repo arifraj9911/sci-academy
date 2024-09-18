@@ -1,7 +1,7 @@
-import blueLine from "../../assets/icon1.svg";
-import purpleLine from "../../assets/icon1.svg";
-import op1 from "../../assets/icon1.svg";
-import op2 from "../../assets/icon1.svg";
+import blueLine from "../../assets/blue-line.svg";
+import purpleLine from "../../assets/purple-line.svg";
+import op1 from "../../assets/op1.png";
+import op2 from "../../assets/op2.png";
 
 const Testimonials = () => {
   return (
