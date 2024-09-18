@@ -4,6 +4,8 @@ import VideoSolutions from "../Pages/VideoSolutions/VideoSolutions";
 import Feedback from "../Pages/Feedback/Feedback";
 import About from "../Pages/About/About";
 import PracticeTest from "../Pages/PracticeTest/PracticeTest";
+import SelectMaterial from "../Pages/PracticeTest/SelectMaterial/SelectMaterial";
+import ContentSummery from "../Pages/PracticeTest/ContentSummery/ContentSummery";
 
 export const router = createBrowserRouter([
   {
@@ -25,6 +27,14 @@ export const router = createBrowserRouter([
       {
         path: "/profile/practice-test",
         element: <PracticeTest />,
+      },
+      {
+        path: "/profile/practice-test/:id",
+        element: <SelectMaterial />,
+      },
+      {
+        path: "/profile/practice-test/:id/summery",
+        element: <ContentSummery />,
       },
       {
         path: "/profile/exam-centre",

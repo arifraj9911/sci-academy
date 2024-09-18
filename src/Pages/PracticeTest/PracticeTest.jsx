@@ -4,6 +4,7 @@ import arrowBtn from "../../assets/images/arrow.svg";
 import filterViewsIcon from "../../assets/images/filter_views.svg";
 import clock from "../../assets/images/clock.svg";
 import studyMaterial from "../../data/studyMaterialData";
+import { useNavigate } from "react-router-dom";
 
 const categories = ["All", "Tests", "Exams", "Textbook"];
 const courses = ["CSE", "EEE", "ICT", "CIVIL"];
@@ -19,6 +20,14 @@ const PracticeTest = () => {
   const [toggleCourse, setToggleCourse] = useState(false);
   const [toggleSub, setToggleSub] = useState(false);
   const [toggleView, setToggleView] = useState(false);
+
+  const navigate = useNavigate();
+
+  const handleStudySelect = (id) => {
+    // console.log(id)
+    navigate(`/profile/practice-test/${id}`);
+  };
+
   return (
     <div>
       {/* navbar start */}
@@ -159,7 +168,8 @@ const PracticeTest = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {studyMaterial?.map((study) => (
             <div
-              className="border border-[#DFE4EA] rounded-3xl p-6"
+              onClick={() => handleStudySelect(study?.id)}
+              className="border cursor-default border-[#DFE4EA] rounded-3xl p-6"
               key={study?.id}
             >
               <img
