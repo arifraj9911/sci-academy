@@ -112,6 +112,23 @@ const Courses = () => {
                 ))}
               </div>
             </div>
+            <div className="flex items-center justify-between mt-12">
+              <div>
+                <h4 className=" text-primary-heading font-poppins text-2xl font-semibold capitalize">
+                  {item.title}
+                </h4>
+                <p className=" text-primary-blue font-poppins text-base font-semibold capitalize mt-2">
+                  +{item.totalStudents}
+                </p>
+              </div>
+              <Link className="py-4 px-6 rounded-2xl border border-primary-heading bg-white">
+                Explore Course
+              </Link>
+            </div>
+            <hr className="w-full h-[0.0625rem] bg-mystic mt-6 mb-4" />
+            <p className=" text-pale_sky font-poppins text-base pb-2">
+              {item.description}
+            </p>
           </SwiperSlide>
         ))}
       </Swiper>

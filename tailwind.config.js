@@ -20,6 +20,7 @@ export default {
         "zircon":"#F6F9FF",
         "boulder":"#767676",
         "sky_blue":"#3758F91A",
+        "mystic":"#DFE4EA",
       },
       maxWidth: {
         "screen-mak": "1900px",
