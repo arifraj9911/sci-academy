@@ -1,31 +1,58 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
 import Signup from "../Pages/SIgnup/Signup";
+import VideoSolutions from "../Pages/VideoSolutions/VideoSolutions";
+import Feedback from "../Pages/Feedback/Feedback";
+import About from "../Pages/About/About";
+import PracticeTest from "../Pages/PracticeTest/PracticeTest";
+import SelectMaterial from "../Pages/PracticeTest/SelectMaterial/SelectMaterial";
+import ContentSummery from "../Pages/PracticeTest/ContentSummery/ContentSummery";
+import Home from "../pages/Home";
 
 export const router = createBrowserRouter([
   {
     path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/profile",
     element: <Main />,
     children: [
       {
-        path: "/",
+        path: "/profile",
         element: <div>Home Page</div>,
       },
       {
-        path: "/study-materials",
+        path: "/profile/study-materials",
         element: <div>study</div>,
       },
       {
-        path: "/video-solutions",
-        element: <div>Video</div>,
+        path: "/profile/video-solutions",
+        element: <VideoSolutions />,
       },
       {
-        path: "/practice-test",
-        element: <div>Practice Test</div>,
+        path: "/profile/practice-test",
+        element: <PracticeTest />,
       },
       {
-        path: "/exam-centre",
+        path: "/profile/practice-test/:id",
+        element: <SelectMaterial />,
+      },
+      {
+        path: "/profile/practice-test/:id/summery",
+        element: <ContentSummery />,
+      },
+      {
+        path: "/profile/exam-centre",
         element: <div>Exam Centre</div>,
+      },
+      {
+        path: "/profile/about",
+        element: <About />,
+      },
+      {
+        path: "/profile/feedback",
+        element: <Feedback />,
       },
       {
         // 404 not found
