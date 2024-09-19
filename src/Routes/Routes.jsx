@@ -8,6 +8,7 @@ import PracticeTest from "../Pages/PracticeTest/PracticeTest";
 import SelectMaterial from "../Pages/PracticeTest/SelectMaterial/SelectMaterial";
 import ContentSummery from "../Pages/PracticeTest/ContentSummery/ContentSummery";
 import Home from "../pages/Home";
+import Signin from "../Pages/Signin/Signin";
 
 export const router = createBrowserRouter([
   {
@@ -67,8 +68,8 @@ export const router = createBrowserRouter([
     element: <div>404 Not Found</div>,
   },
   {
-    path: "/login",
-    element: <div>Login</div>,
+    path: "/signin",
+    element: <Signin></Signin>,
   },
   {
     path: "/signup",
