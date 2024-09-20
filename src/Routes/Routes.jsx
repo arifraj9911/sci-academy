@@ -9,6 +9,7 @@ import SelectMaterial from "../Pages/PracticeTest/SelectMaterial/SelectMaterial"
 import ContentSummery from "../Pages/PracticeTest/ContentSummery/ContentSummery";
 import Home from "../pages/Home";
 import Signin from "../Pages/Signin/Signin";
+import Membership from "../Pages/Membership and Pricing/Membership";
 
 export const router = createBrowserRouter([
   {
@@ -46,6 +47,10 @@ export const router = createBrowserRouter([
       {
         path: "/profile/exam-centre",
         element: <div>Exam Centre</div>,
+      },
+      {
+        path: "/profile/membership",
+        element: <Membership></Membership>
       },
       {
         path: "/profile/about",
