@@ -1,13 +1,18 @@
 import { useState } from "react";
 import shape from "./../../../assets/images/membership pricing/shape.png";
+import UnsubscribeModal from "./UnsubscribeModal";
 
-const MembershipPricing = () => {
+const MembershipPricing = ({currentSubscription}) => {
   const [subscribeType, setSubscribeType] = useState("monthly");
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const onClose = () => {
+    setIsModalOpen(false);
+  };
   return (
     <div className="">
       {/* Subscription Type Buttons */}
-      <section className="flex items-center mb-8">
+      <section className="flex items-center justify-between mb-8">
         <div className="flex items-center bg-[#F3F4F6] font-medium rounded-2xl p-1.5 h-[56px]">
           <button
             className={`h-full w-[120px] rounded-xl  ${
@@ -26,6 +31,13 @@ const MembershipPricing = () => {
             Yearly
           </button>
         </div>
+        {/* unsubscribe button */}
+        <button
+          onClick={() => setIsModalOpen(true)}
+          className="px-6 h-[56px] bg-[#FEEBEB] text-[#F04545] font-medium rounded-2xl"
+        >
+          Unsubscribe current plan
+        </button>
       </section>
 
       {/* Pricing Cards */}
@@ -158,6 +170,7 @@ const MembershipPricing = () => {
           </button>
         </div>
       </div>
+      {isModalOpen && <UnsubscribeModal onClose={onClose} currentSubscription={currentSubscription}></UnsubscribeModal>}
     </div>
   );
 };

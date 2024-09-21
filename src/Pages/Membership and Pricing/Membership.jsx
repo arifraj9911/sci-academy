@@ -1,6 +1,9 @@
 import MembershipPricing from "../Shared/Membership Pricing/MembershipPricing";
 
 const Membership = () => {
+
+  const currentSubscription = ''
+
   return (
     <div className="max-w-screen-desktop mx-auto px-5 font-poppins">
       {/* top heading */}
@@ -17,7 +20,7 @@ const Membership = () => {
 
       {/* pricing component */}
       <section className="mt-8">
-        <MembershipPricing></MembershipPricing>
+        <MembershipPricing currentSubscription={currentSubscription}></MembershipPricing>
       </section>
     </div>
   );
