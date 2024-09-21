@@ -10,6 +10,7 @@ import ContentSummery from "../Pages/PracticeTest/ContentSummery/ContentSummery"
 import Home from "../pages/Home";
 import Signin from "../Pages/Signin/Signin";
 import Membership from "../Pages/Membership and Pricing/Membership";
+import PaymentForm from "../Pages/Membership and Pricing/PaymentForm/PaymentForm";
 
 export const router = createBrowserRouter([
   {
@@ -51,6 +52,10 @@ export const router = createBrowserRouter([
       {
         path: "/profile/membership",
         element: <Membership></Membership>
+      },
+      {
+        path: "/profile/membership/payment",
+        element: <PaymentForm></PaymentForm>
       },
       {
         path: "/profile/about",
