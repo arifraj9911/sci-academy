@@ -16,6 +16,8 @@ const ContentSummery = () => {
   const [comments, setComments] = useState([]);
   const [commentInput, setCommentInput] = useState("");
   const [activeReplyIndex, setActiveReplyIndex] = useState(null);
+  const [replyInput, setReplyInput] = useState("");
+  const [replies, setReplies] = useState([]);
 
   const handleCommentInput = (e) => {
     setCommentInput(e.target.value);
@@ -35,7 +37,24 @@ const ContentSummery = () => {
     setActiveReplyIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 
+  const handleReplyInput = (e) => {
+    setReplyInput(e.target.value);
+  };
+
+  const handleReplies = (e, index) => {
+    if (e.key === "Enter" && replyInput.trim() !== "") {
+      const updatedComments = [...comments];
+      updatedComments[index].replies = [
+        ...(updatedComments[index].replies || []),
+        { reply: replyInput },
+      ];
+      setReplies(updatedComments);
+      setReplyInput("");
+    }
+  };
+
   console.log(comments);
+  console.log(replies);
   // console.log(content,module)
   return (
     <div>
@@ -147,12 +166,22 @@ const ContentSummery = () => {
                       </span>
                     </div>
 
+                    {/* reply message */}
+                    <div>
+                      {comment?.replies?.map((reply, index) => (
+                        <div key={index}>{reply?.reply}</div>
+                      ))}
+                    </div>
+
                     {/* reply input */}
                     {activeReplyIndex === index && (
                       <div className="pt-4 w-[500px]">
                         <input
                           type="text"
                           name=""
+                          onKeyDown={(e) => handleReplies(e, index)}
+                          value={replyInput}
+                          onChange={handleReplyInput}
                           className="border w-full rounded-xl outline-none py-2 px-4"
                           id=""
                           placeholder="reply..."
