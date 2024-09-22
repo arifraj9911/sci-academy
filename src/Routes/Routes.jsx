@@ -11,6 +11,7 @@ import Home from "../pages/Home";
 import Signin from "../Pages/Signin/Signin";
 import Membership from "../Pages/Membership and Pricing/Membership";
 import PaymentForm from "../Pages/Membership and Pricing/PaymentForm/PaymentForm";
+import ProfileHome from "../Pages/Profile Home/ProfileHome";
 
 export const router = createBrowserRouter([
   {
@@ -23,7 +24,7 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/profile",
-        element: <div>Home Page</div>,
+        element: <ProfileHome></ProfileHome>,
       },
       {
         path: "/profile/study-materials",
