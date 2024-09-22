@@ -28,7 +28,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -42,7 +42,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -56,7 +56,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -78,7 +78,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -92,7 +92,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -106,7 +106,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -127,7 +127,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -141,7 +141,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -155,7 +155,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -177,7 +177,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -191,7 +191,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -205,7 +205,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -243,7 +243,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -257,7 +257,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -271,7 +271,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -293,7 +293,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -307,7 +307,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -321,7 +321,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -342,7 +342,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -356,7 +356,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -370,7 +370,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -392,7 +392,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -406,7 +406,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -420,7 +420,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -458,7 +458,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -472,7 +472,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -486,7 +486,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -508,7 +508,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -522,7 +522,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -536,7 +536,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -557,7 +557,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -571,7 +571,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -585,7 +585,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -607,7 +607,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -621,7 +621,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -635,7 +635,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -673,7 +673,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -687,7 +687,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -701,7 +701,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -723,7 +723,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -737,7 +737,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -751,7 +751,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -772,7 +772,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -786,7 +786,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -800,7 +800,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -822,7 +822,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -836,7 +836,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -850,7 +850,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -888,7 +888,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -902,7 +902,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -916,7 +916,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -938,7 +938,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -952,7 +952,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -966,7 +966,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -987,7 +987,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -1001,7 +1001,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -1015,7 +1015,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -1037,7 +1037,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -1051,7 +1051,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -1065,7 +1065,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -1103,7 +1103,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -1117,7 +1117,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -1131,7 +1131,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -1153,7 +1153,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -1167,7 +1167,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -1181,7 +1181,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -1202,7 +1202,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -1216,7 +1216,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -1230,7 +1230,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -1252,7 +1252,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -1266,7 +1266,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -1280,7 +1280,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -1318,7 +1318,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -1332,7 +1332,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -1346,7 +1346,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -1368,7 +1368,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -1382,7 +1382,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -1396,7 +1396,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -1417,7 +1417,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -1431,7 +1431,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -1445,7 +1445,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -1467,7 +1467,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -1481,7 +1481,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -1495,7 +1495,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -1533,7 +1533,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -1547,7 +1547,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -1561,7 +1561,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -1583,7 +1583,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -1597,7 +1597,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -1611,7 +1611,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -1632,7 +1632,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -1646,7 +1646,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -1660,7 +1660,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -1682,7 +1682,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -1696,7 +1696,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }
@@ -1710,7 +1710,7 @@ const studyMaterial = [
             c_subTitle:
               "Progressively formulate market-driven technologies and emerging communities. Compellingly customize just.",
             c_videos: {
-              video_link:"https://www.youtube.com/embed/xiljZg54zBg?si=cyp_Atcid0CSpRcN",
+              video_link:"https://www.youtube.com/embed/joJVIz6tN24?si=JCtyZR_NUHd1bt0x",
               images:{
                 image:`${summeryImg}`
               }

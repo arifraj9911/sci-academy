@@ -167,9 +167,30 @@ const ContentSummery = () => {
                     </div>
 
                     {/* reply message */}
-                    <div>
+                    <div className="">
                       {comment?.replies?.map((reply, index) => (
-                        <div key={index}>{reply?.reply}</div>
+                        <div
+                          className="mt-12 flex items-start gap-3"
+                          key={index}
+                        >
+                          <div className="relative">
+                            <div className="border-s -top-12 left-2 border-[#DFE4EA] h-[40px] absolute"></div>
+                            <img src={commentImg} alt="comment_user" />
+                          </div>
+                          <div>
+                            <p className="font-bold text-sm font-inter flex gap-5 text-[#111928]">
+                              <span>John Cena</span>
+                              <span className="text-[#536471] text-[15px] space-x-1 font-light">
+                                <span>johncena321</span>
+                                <span className="dot-before"></span>
+                                <span>5h</span>
+                              </span>
+                            </p>
+                            <p className="text-primary-text font-poppins  mt-1">
+                              {reply?.reply}
+                            </p>
+                          </div>
+                        </div>
                       ))}
                     </div>
 
