@@ -1,5 +1,6 @@
-import signupImage from "./../../assets/images/Sign-up/shapes.png";
-import logo from "./../../assets/images/Sign-up/Group 10.svg";
+// import signupImage from "./../../assets/images/Sign-up/shapes.png";
+import signupImage from "./../../assets/images/Sign-up/shapes New.png";
+// import logo from "./../../assets/images/Sign-up/Group 10.svg";
 import { useState } from "react";
 
 const Signup = () => {
@@ -69,8 +70,8 @@ const Signup = () => {
   const progressValue = (formPage / 4) * 100;
 
   return (
-    <div className="flex h-screen items-center justify-center bg-gray-100 px-[10%] lg:px-[10%]">
-      <div className="bg-white shadow-lg rounded-lg w-full max-w-[1440px]  grid grid-cols-1 lg:grid-cols-2 min-h-[86vh] max-h-[95vh]">
+    <div className="flex min-h-screen items-center justify-center bg-gray-100 px-[8%] py-10 lg:py-0 lg:px-[10%]">
+      <div className="bg-white shadow-lg rounded-lg w-full max-w-[1440px] grid grid-cols-1 lg:grid-cols-2 lg:min-h-[86vh] lg:max-h-[95vh]">
         {/* Left Side (Logo and Welcome message) */}
         <div
           style={{
@@ -79,9 +80,9 @@ const Signup = () => {
           }}
           className=" text-white 8 rounded-l-lg relative h-full hidden lg:block"
         >
-          <div className="flex flex-col justify-center items-center h-full">
+          {/* <div className="flex flex-col justify-center items-center h-full">
             <img src={logo} alt="" />
-          </div>
+          </div> */}
 
           <div className="absolute bottom-9 left-9 font-inter text-3xl font-semibold leading-[35px]">
             <p>Welcome to </p>
@@ -89,19 +90,21 @@ const Signup = () => {
           </div>
         </div>
         {/* Right Side (Form) */}
-        <div className="px-8 xl:px-16 py-[50px] font-inter max-h-full overflow-hidden">
-          <h2 className="text-3xl font-bold mb-5">Become a Member</h2>
-          <p className="text-xl font-medium text-[#3D5AF1]">
+        <div className="px-6 xl:px-16 py-7 md:py-[50px] font-inter max-h-full overflow-hidden">
+          <h2 className="text-2xl md:text-3xl font-bold mb-1 md:mb-5">
+            Become a Member
+          </h2>
+          <p className="text-lg md:text-xl font-medium text-[#3D5AF1]">
             {formPage === 1 && "Personal Information"}
             {formPage === 2 && "Academic Information"}
             {formPage === 3 && "Account Setup and Security"}
           </p>
-          <p className="text-sm text-[#9CA3AF] mb-3">
+          <p className="text-sm text-[#9CA3AF] mb-2 md:mb-3">
             {formPage === 1 && "Please enter your Personal Information"}
             {formPage === 2 && "Please enter your Academic Information"}
             {formPage === 3 && "Please enter your Account Setup and Security"}
           </p>
-          <p className="text-sm text-[#9CA3AF] mb-3"></p>
+          {/* <p className="text-sm text-[#9CA3AF] mb-3"></p> */}
           {/* progress bar */}
           <div className="mb-3">
             <progress
@@ -115,35 +118,39 @@ const Signup = () => {
           <form onSubmit={handleSubmit} className="text-[#1F2A37]">
             {/* Display common error message */}
             {formError && (
-              <p className="text-red-500 text-sm mb-3">{formError}</p>
+              <p className="text-red-500 text-sm mb-2 md:mb-3">{formError}</p>
             )}
 
             {/* form page 1: Personal Information */}
             {formPage === 1 && (
               <div className="space-y-2">
                 {/* full name and family name */}
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4">
                   <div>
-                    <label className="font-semibold">Full Name*</label>
+                    <label className="font-medium md:font-semibold">
+                      Full Name*
+                    </label>
                     <input
                       type="text"
                       name="fullName"
                       value={formData.fullName}
                       onChange={handleInputChange}
                       placeholder="Enter your full name"
-                      className="w-full px-4 py-2 border rounded-lg bg-[#F3F4F6] mt-1 outline-none focus:ring-1"
+                      className="w-full text-sm md:text-base px-4 py-2 border rounded-lg bg-[#F3F4F6] mt-1 outline-none focus:ring-1"
                       required
                     />
                   </div>
                   <div>
-                    <label className="font-semibold">Family Name*</label>
+                    <label className="font-medium md:font-semibold">
+                      Family Name*
+                    </label>
                     <input
                       type="text"
                       name="familyName"
                       value={formData.familyName}
                       onChange={handleInputChange}
                       placeholder="Enter your family name"
-                      className="w-full px-4 py-2 border rounded-lg bg-[#F3F4F6] mt-1 outline-none focus:ring-1"
+                      className="w-full text-sm md:text-base px-4 py-2 border rounded-lg bg-[#F3F4F6] mt-1 outline-none focus:ring-1"
                       required
                     />
                   </div>
@@ -151,68 +158,76 @@ const Signup = () => {
 
                 {/* date of birth */}
                 <div>
-                  <label className="font-semibold">Date of Birth*</label>
+                  <label className="font-medium md:font-semibold">
+                    Date of Birth*
+                  </label>
                   <input
                     type="date"
                     name="dateOfBirth"
                     value={formData.dateOfBirth}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-2 border rounded-lg bg-[#F3F4F6] mt-1 outline-none focus:ring-1"
+                    className="w-full text-sm md:text-base px-4 py-2 border rounded-lg bg-[#F3F4F6] mt-1 outline-none focus:ring-1"
                     required
                   />
                 </div>
 
                 {/* address -> optional */}
                 <div>
-                  <label className="font-semibold">Address</label>
+                  <label className="font-medium md:font-semibold">
+                    Address
+                  </label>
                   <input
                     type="text"
                     name="address"
                     value={formData.address}
                     onChange={handleInputChange}
                     placeholder="Enter your address"
-                    className="w-full px-4 py-2 border rounded-lg bg-[#F3F4F6] mt-1 outline-none focus:ring-1"
+                    className="w-full text-sm md:text-base px-4 py-2 border rounded-lg bg-[#F3F4F6] mt-1 outline-none focus:ring-1"
                   />
                 </div>
 
                 {/* email */}
                 <div>
-                  <label className="font-semibold">Email*</label>
+                  <label className="font-medium md:font-semibold">Email*</label>
                   <input
                     type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
                     placeholder="Enter your email"
-                    className="w-full px-4 py-2 border rounded-lg bg-[#F3F4F6] mt-1 outline-none focus:ring-1"
+                    className="w-full text-sm md:text-base px-4 py-2 border rounded-lg bg-[#F3F4F6] mt-1 outline-none focus:ring-1"
                     required
                   />
                 </div>
 
                 {/* parents email */}
                 <div>
-                  <label className="font-semibold">Parents Email 1*</label>
+                  <label className="font-medium md:font-semibold">
+                    Parents Email 1*
+                  </label>
                   <input
                     type="email"
                     name="parentsEmail1"
                     value={formData.parentsEmail1}
                     onChange={handleInputChange}
                     placeholder="Enter your parent's email"
-                    className="w-full px-4 py-2 border rounded-lg bg-[#F3F4F6] mt-1 outline-none focus:ring-1"
+                    className="w-full text-sm md:text-base px-4 py-2 border rounded-lg bg-[#F3F4F6] mt-1 outline-none focus:ring-1"
                     required
                   />
                 </div>
 
                 {/* parents email 2 -> optional */}
                 <div>
-                  <label className="font-semibold">Parents Email 2</label>
+                  <label className="font-medium md:font-semibold">
+                    Parents Email 2
+                  </label>
                   <input
                     type="email"
                     name="parentsEmail2"
                     value={formData.parentsEmail2}
                     onChange={handleInputChange}
                     placeholder="Enter another parent's email (optional)"
-                    className="w-full px-4 py-2 border rounded-lg bg-[#F3F4F6] mt-1 outline-none focus:ring-1"
+                    className="w-full text-sm md:text-base px-4 py-2 border rounded-lg bg-[#F3F4F6] mt-1 outline-none focus:ring-1"
                   />
                 </div>
               </div>
@@ -223,28 +238,32 @@ const Signup = () => {
               <div className="space-y-2">
                 {/* school */}
                 <div>
-                  <label className="font-semibold">School*</label>
+                  <label className="font-medium md:font-semibold">
+                    School*
+                  </label>
                   <input
                     type="text"
                     name="school"
                     value={formData.school}
                     onChange={handleInputChange}
                     placeholder="Enter your school"
-                    className="w-full px-4 py-2 border rounded-lg bg-[#F3F4F6] mt-1 outline-none focus:ring-1"
+                    className="w-full text-sm md:text-base px-4 py-2 border rounded-lg bg-[#F3F4F6] mt-1 outline-none focus:ring-1"
                     required
                   />
                 </div>
 
                 {/* year level */}
                 <div>
-                  <label className="font-semibold">Year Level*</label>
+                  <label className="font-medium md:font-semibold">
+                    Year Level*
+                  </label>
                   <input
                     type="text"
                     name="yearLevel"
                     value={formData.yearLevel}
                     onChange={handleInputChange}
                     placeholder="Enter your year level"
-                    className="w-full px-4 py-2 border rounded-lg bg-[#F3F4F6] mt-1 outline-none focus:ring-1"
+                    className="w-full text-sm md:text-base px-4 py-2 border rounded-lg bg-[#F3F4F6] mt-1 outline-none focus:ring-1"
                     required
                   />
                 </div>
@@ -256,7 +275,7 @@ const Signup = () => {
               <div className="space-y-2">
                 {/* username or email */}
                 <div>
-                  <label className="font-semibold">
+                  <label className="font-medium md:font-semibold">
                     Username or Email Address*
                   </label>
                   <input
@@ -265,21 +284,23 @@ const Signup = () => {
                     value={formData.username}
                     onChange={handleInputChange}
                     placeholder="Choose a username"
-                    className="w-full px-4 py-2 border rounded-lg bg-[#F3F4F6] mt-1 outline-none focus:ring-1"
+                    className="w-full text-sm md:text-base px-4 py-2 border rounded-lg bg-[#F3F4F6] mt-1 outline-none focus:ring-1"
                     required
                   />
                 </div>
 
                 {/* password */}
                 <div>
-                  <label className="font-semibold">Password*</label>
+                  <label className="font-medium md:font-semibold">
+                    Password*
+                  </label>
                   <input
                     type="password"
                     name="password"
                     value={formData.password}
                     onChange={handleInputChange}
                     placeholder="Choose a password"
-                    className="w-full px-4 py-2 border rounded-lg bg-[#F3F4F6] mt-1 outline-none focus:ring-1"
+                    className="w-full text-sm md:text-base px-4 py-2 border rounded-lg bg-[#F3F4F6] mt-1 outline-none focus:ring-1"
                     required
                   />
                 </div>
@@ -290,7 +311,7 @@ const Signup = () => {
             <div className="flex justify-between mt-6 font-semibold gap-5 items-center">
               <button
                 type="button"
-                className={`w-1/2 border border-[#3D5AF1] rounded-md text-[#3D5AF1] py-2 ${
+                className={`w-1/2 border border-[#1A416A] rounded-md text-[#1A416A] py-2 ${
                   formPage === 1 ? "opacity-50 cursor-not-allowed" : ""
                 }`}
                 onClick={() => formPage > 1 && setFormPage(formPage - 1)}
@@ -302,7 +323,7 @@ const Signup = () => {
               {formPage < 3 ? (
                 <button
                   type="button"
-                  className="w-1/2 border border-[#3D5AF1] bg-[#3758F9] text-white py-2 rounded-md"
+                  className="w-1/2 border border-[#1A416A] bg-[#1A416A] text-white py-2 rounded-md"
                   onClick={handleNext}
                 >
                   Next
@@ -310,7 +331,7 @@ const Signup = () => {
               ) : (
                 <button
                   type="submit"
-                  className="w-1/2 border border-[#3D5AF1] bg-[#3758F9] text-white py-2 rounded-md"
+                  className="w-1/2 border border-[#1A416A] bg-[#1A416A] text-white py-2 rounded-md"
                 >
                   Submit
                 </button>
