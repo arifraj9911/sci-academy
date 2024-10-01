@@ -3,45 +3,65 @@ import blogPostsData from "../../data/profileHomeBlogsData";
 import ProfileBlogsCard from "./Blogs Card/ProfileBlogsCard";
 
 const ProfileHome = () => {
-  const [allBlogData, setAllBlogData] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState("ALL");
-  const [filteredBlogData, setFilteredBlogData] = useState([]);
+  const [allBlogsData, setAllBlogsData] = useState([]);
+  const [filteredBlogsData, setFilteredBlogsData] = useState([]);
+  const [selectedSubject, setSelectedSubject] = useState("ALL");
   const [searchInput, setSearchInput] = useState("");
-
-  // suggestion related
   const [suggestions, setSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
 
-  // get all blog data
+  // Fetch all blogs when component mounts
   useEffect(() => {
-    setAllBlogData(blogPostsData);
-    setFilteredBlogData(blogPostsData);
-
-    // add event listener to handle clicks outside search bar
-    document.addEventListener("mousedown", handleClickOutside);
-
-    return () => {
-      // cleanup event listener
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
+    setAllBlogsData(blogPostsData);
+    setFilteredBlogsData(blogPostsData);
   }, []);
 
-  // get all categories
-  const categories = [
+  // Ref for search input
+  const inputRef = useRef(null);
+
+  // Set up subjects for filtering
+  const subjects = [
     "ALL",
-    ...Array.from(new Set(allBlogData.map((blogPost) => blogPost.category))),
+    ...Array.from(new Set(allBlogsData?.map((blogPost) => blogPost?.subject))),
   ];
 
-  // handle search
-  const handleSearch = (event) => {
-    const searchValue = event.target.value.toLowerCase();
+  // Filter blogs when search or subject changes
+  const filterBlogs = (subject, searchValue) => {
+    const searchValueLower = searchValue.toLowerCase();
+
+    const filteredData = allBlogsData.filter((blogPost) => {
+      const matchesTitle = blogPost?.title
+        ?.toLowerCase()
+        .includes(searchValueLower);
+      const matchesSubject = subject === "ALL" || blogPost?.subject === subject;
+
+      return matchesTitle && matchesSubject;
+    });
+
+    setFilteredBlogsData(filteredData);
+  };
+
+  // Handle subject change (category change)
+  const handleSubjectChange = (subject) => {
+    setSelectedSubject(subject);
+    filterBlogs(subject, searchInput); // Trigger filtering with the new subject
+  };
+
+  // Handle search button click
+  const handleSearch = () => {
+    filterBlogs(selectedSubject, searchInput);
+    setShowSuggestions(false);
+  };
+
+  // Show suggestions when typing
+  const handleSearchChange = (event) => {
+    const searchValue = event.target.value;
     setSearchInput(searchValue);
 
     if (searchValue.length > 0) {
-      // suggestions based on input
-      const filteredSuggestions = allBlogData
+      const filteredSuggestions = allBlogsData
         ?.filter((blogPost) =>
-          blogPost?.title?.toLowerCase()?.includes(searchValue)
+          blogPost?.title?.toLowerCase()?.includes(searchValue.toLowerCase())
         )
         ?.map((blogPost) => blogPost?.title);
 
@@ -50,50 +70,36 @@ const ProfileHome = () => {
     } else {
       setShowSuggestions(false);
     }
-    filterBlogs(searchValue, selectedCategory);
   };
 
-  // handle category change
-  const handleCategoryChange = (category) => {
-    setSelectedCategory(category);
-    filterBlogs(searchInput, category);
-  };
-
-  // handle suggestion click
+  // Handle suggestion click
   const handleSuggestionClick = (suggestion) => {
-    setSearchInput(suggestion?.toLowerCase());
-    filterBlogs(suggestion?.toLowerCase(), selectedCategory);
+    setSearchInput(suggestion.toLowerCase());
+    filterBlogs(selectedSubject, suggestion.toLowerCase());
     setShowSuggestions(false);
   };
 
-  // ref to detect outside click of search input
-  const inputRef = useRef(null);
+  // Handle key press for Enter
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      handleSearch();
+    }
+  };
+
+  // Detect click outside search input to hide suggestions
   const handleClickOutside = (event) => {
     if (inputRef.current && !inputRef.current.contains(event.target)) {
       setShowSuggestions(false);
     }
   };
 
-  // filter blogs data
-  const filterBlogs = (searchValue, category) => {
-    // map through all the blogs data
-    const filteredData = allBlogData.filter((blogPost) => {
-      // search for matched input value
-      const matchesSearch = blogPost?.title
-        ?.toLowerCase()
-        ?.includes(searchValue);
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
 
-      // search for matched category
-      const matchedCategory =
-        category === "ALL" || blogPost.category === category;
-
-      return matchesSearch && matchedCategory;
-    });
-    // set filtered data to display
-    setFilteredBlogData(filteredData);
-  };
-
-  // console.log(filteredBlogData);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
   return (
     <div className="pt-5 font-poppins">
       {/* heading */}
@@ -127,16 +133,14 @@ const ProfileHome = () => {
             type="text"
             className="w-full h-[56px] border border-[#DFE4EA] rounded-[30px] outline-none pl-14 pr-4"
             placeholder="Search article here..."
-            // value={searchInput}
-            onChange={handleSearch}
+            value={searchInput}
+            onChange={handleSearchChange}
+            onKeyDown={handleKeyDown}
           />
           {/* button */}
           <button
-            onClick={() => {
-              filterBlogs(searchInput, selectedCategory);
-              setShowSuggestions(false);  
-            }}
             className="absolute bg-[#3860E2] text-white px-10 py-2.5 rounded-full right-1.5 top-1/2 transform -translate-y-1/2"
+            onClick={handleSearch}
           >
             Search
           </button>
@@ -161,24 +165,26 @@ const ProfileHome = () => {
         </div>
       </section>
 
-      {/* categories */}
+      {/* categories / subjects */}
       <section className="flex items-center justify-center gap-2 flex-wrap mt-4 text-xs">
-        {categories?.map((category, index) => (
+        {subjects?.map((subject, index) => (
           <button
             key={index}
-            className={`px-4 py-2  border border-gray-100 rounded-full ${selectedCategory === category ? 'bg-[#3758F91A]' : 'bg-[#F7F8FA]'}`}
-            onClick={() => handleCategoryChange(category)}
+            className={`px-4 py-2  border border-gray-100 rounded-full ${
+              selectedSubject === subject ? "bg-[#3758F91A]" : "bg-[#F7F8FA]"
+            }`}
+            onClick={() => handleSubjectChange(subject)}
           >
-            {category}
+            {subject}
           </button>
         ))}
       </section>
 
       {/* blogs */}
       <section className="mt-8 md:px-10 pb-10">
-        {filteredBlogData.length > 0 ? (
+        {filteredBlogsData.length > 0 ? (
           <div className="grid grid-cols-1 gap-6">
-            {filteredBlogData.map((blogPost) => (
+            {filteredBlogsData.map((blogPost) => (
               <ProfileBlogsCard
                 key={blogPost?.id}
                 blogPost={blogPost}
