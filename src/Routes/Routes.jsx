@@ -15,6 +15,8 @@ import PaymentForm from "../Pages/Membership and Pricing/PaymentForm/PaymentForm
 import ProfileHome from "../Pages/Profile Home/ProfileHome";
 import ProfileBlogDetails from "../Pages/Profile Blog Details/ProfileBlogDetails";
 import SignUpAlternative from "../Pages/SignUp Alternative/SignUpAlternative";
+import PrivateRoute from "./PrivateRoute";
+import UserLanding from "../Pages/User Landing/UserLanding";
 
 export const router = createBrowserRouter([
   {
@@ -22,8 +24,20 @@ export const router = createBrowserRouter([
     element: <Home />,
   },
   {
+    path: "/user/home",
+    element: (
+      <PrivateRoute>
+        <UserLanding></UserLanding>
+      </PrivateRoute>
+    ),
+  },
+  {
     path: "/profile",
-    element: <Main />,
+    element: (
+      <PrivateRoute>
+        <Main />
+      </PrivateRoute>
+    ),
     children: [
       {
         path: "/profile",
@@ -63,11 +77,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/profile/membership",
-        element: <Membership></Membership>
+        element: <Membership></Membership>,
       },
       {
         path: "/profile/membership/payment",
-        element: <PaymentForm></PaymentForm>
+        element: <PaymentForm></PaymentForm>,
       },
       {
         path: "/profile/about",

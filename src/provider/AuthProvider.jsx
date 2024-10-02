@@ -9,7 +9,7 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { app } from "../firebase/Firebase.config";
-import { GoogleAuthProvider,FacebookAuthProvider } from "firebase/auth";
+import { GoogleAuthProvider, FacebookAuthProvider } from "firebase/auth";
 
 export const AuthContext = createContext(null);
 const auth = getAuth(app);
@@ -65,7 +65,16 @@ const AuthProvider = ({ children }) => {
     };
   }, []);
 
-  const authInfo = { createUser, loginUser, logOutUser, googleSignin ,facebookSignin};
+  const authInfo = {
+    createUser,
+    loginUser,
+    logOutUser,
+    googleSignin,
+    facebookSignin,
+    user,
+    loading,
+    setLoading
+  };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
   );
