@@ -9,7 +9,7 @@ const ProfileBlogsCard = ({ blogPost }) => {
     >
       {/* img */}
       <img
-        src={blogPost?.images[0]} // Updated to match the "images" array structure
+        src={blogPost?.images[0]} 
         alt={blogPost.title}
         className="w-[268px] h-[268px] object-cover rounded-lg"
       />
@@ -30,7 +30,7 @@ const ProfileBlogsCard = ({ blogPost }) => {
           >
             <circle cx="2.5" cy="3" r="2.5" fill="#D4D7DF" />
           </svg>
-          <p>{blogPost.subject}</p> {/* Use subject instead of category */}
+          <p>{blogPost.subject}</p> 
         </div>
         {/* title */}
         <h2 className="text-2xl font-medium mt-3">{blogPost.title}</h2>
@@ -39,7 +39,7 @@ const ProfileBlogsCard = ({ blogPost }) => {
           {blogPost.short_description.split(" ").slice(0, 40).join(" ") + " ..."}
         </p>
         {/* read more button */}
-        <Link to={blogPost.readMoreLink} className="text-[#3758F9] font-semibold mt-6 flex items-center gap-1">
+        <Link to={`/profile/blog-details/${blogPost?.id}`} className="text-[#3758F9] font-semibold mt-6 flex items-center gap-1">
           Read more <img src={arrowUpRight} alt="arrow" />
         </Link>
       </div>

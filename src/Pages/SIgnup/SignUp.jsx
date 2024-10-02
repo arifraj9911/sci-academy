@@ -4,6 +4,7 @@ import signupImage from "./../../assets/images/Sign-up/shapes New.png";
 import { useState } from "react";
 import MemberForm from "./MemberForm/MemberForm";
 import PartnerForm from "./PartnerForm/PartnerForm";
+import { Link } from "react-router-dom";
 
 const Signup = () => {
   const [selectedRole, setSelectedRole] = useState("");
@@ -93,6 +94,22 @@ const Signup = () => {
                   Continue
                 </button>
               )}
+
+              <div className="mt-4 space-y-2">
+                {/* <p>or</p> */}
+                <p>
+                  <span className="text-blue-[#1A416A] font-medium underline">
+                    <Link to={"/signup-alternative"}>Alternative SignUp</Link>
+                  </span>{" "}
+                  Signup With Only Email Or Google
+                </p>
+                <p>
+                  <span className="text-blue-[#1A416A] font-medium underline">
+                    <Link to={"/signin"}>Login</Link>
+                  </span>{" "}
+                  If You Are Already A Member/Partner
+                </p>
+              </div>
             </div>
           </div>
         )}

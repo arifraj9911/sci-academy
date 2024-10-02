@@ -103,13 +103,13 @@ const ProfileHome = () => {
   return (
     <div className="pt-5 font-poppins">
       {/* heading */}
-      <h1 className="text-center text-[40px] font-semibold">
+      <h1 className="text-center text-2xl md:text-3xl lg:text-[40px] font-semibold">
         Explore our latest blogs
       </h1>
 
       {/* search bar */}
-      <section className="mt-8 flex items-center justify-center relative">
-        <div ref={inputRef} className="relative w-[671px]">
+      <section className="mt-3 md:mt-5 lg:mt-8 flex items-center justify-center relative">
+        <div ref={inputRef} className="relative w-full md:w-[671px]">
           {/* search icon */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -117,7 +117,7 @@ const ProfileHome = () => {
             height="24"
             viewBox="0 0 25 24"
             fill="none"
-            className="absolute left-5 top-1/2 transform -translate-y-1/2"
+            className="absolute left-3 lg:left-5 top-1/2 transform -translate-y-1/2 w-5 lg:w-auto"
           >
             <path
               d="M12 21.75C6.35 21.75 1.75 17.15 1.75 11.5C1.75 5.85 6.35 1.25 12 1.25C17.65 1.25 22.25 5.85 22.25 11.5C22.25 17.15 17.65 21.75 12 21.75ZM12 2.75C7.17 2.75 3.25 6.68 3.25 11.5C3.25 16.32 7.17 20.25 12 20.25C16.83 20.25 20.75 16.32 20.75 11.5C20.75 6.68 16.83 2.75 12 2.75Z"
@@ -131,7 +131,7 @@ const ProfileHome = () => {
           {/* input */}
           <input
             type="text"
-            className="w-full h-[56px] border border-[#DFE4EA] rounded-[30px] outline-none pl-14 pr-4"
+            className="w-full h-[44px] lg:h-[56px] border border-[#DFE4EA] rounded-[30px] outline-none pl-9 lg:pl-14 pr-4 text-sm md:text-base"
             placeholder="Search article here..."
             value={searchInput}
             onChange={handleSearchChange}
@@ -139,7 +139,7 @@ const ProfileHome = () => {
           />
           {/* button */}
           <button
-            className="absolute bg-[#3860E2] text-white px-10 py-2.5 rounded-full right-1.5 top-1/2 transform -translate-y-1/2"
+            className="absolute bg-[#3860E2] text-white px-[18px] lg:px-10 py-1.5 lg:py-2.5 rounded-full right-1.5 md:right-1 lg:right-1.5 top-1/2 transform -translate-y-1/2 text-sm md:text-base"
             onClick={handleSearch}
           >
             Search
@@ -170,7 +170,7 @@ const ProfileHome = () => {
         {subjects?.map((subject, index) => (
           <button
             key={index}
-            className={`px-4 py-2  border border-gray-100 rounded-full ${
+            className={`px-3.5 md:px-[18px] py-1.5 md:py-2  border border-gray-100 rounded-full ${
               selectedSubject === subject ? "bg-[#3758F91A]" : "bg-[#F7F8FA]"
             }`}
             onClick={() => handleSubjectChange(subject)}
