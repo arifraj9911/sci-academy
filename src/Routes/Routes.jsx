@@ -14,6 +14,7 @@ import Membership from "../Pages/Membership and Pricing/Membership";
 import PaymentForm from "../Pages/Membership and Pricing/PaymentForm/PaymentForm";
 import ProfileHome from "../Pages/Profile Home/ProfileHome";
 import ProfileBlogDetails from "../Pages/Profile Blog Details/ProfileBlogDetails";
+import SignUpAlternative from "../Pages/SignUp Alternative/SignUpAlternative";
 
 export const router = createBrowserRouter([
   {
@@ -95,5 +96,9 @@ export const router = createBrowserRouter([
   {
     path: "/signup",
     element: <Signup></Signup>,
+  },
+  {
+    path: "/signup-alternative",
+    element: <SignUpAlternative></SignUpAlternative>,
   },
 ]);

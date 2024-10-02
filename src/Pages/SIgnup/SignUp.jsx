@@ -95,8 +95,14 @@ const Signup = () => {
                 </button>
               )}
 
-              <div className="mt-4">
+              <div className="mt-4 space-y-2">
                 {/* <p>or</p> */}
+                <p>
+                  <span className="text-blue-[#1A416A] font-medium underline">
+                    <Link to={"/signup-alternative"}>Alternative SignUp</Link>
+                  </span>{" "}
+                  Signup With Only Email Or Google
+                </p>
                 <p>
                   <span className="text-blue-[#1A416A] font-medium underline">
                     <Link to={"/signin"}>Login</Link>

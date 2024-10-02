@@ -3,11 +3,12 @@ import logo from "./../../assets/images/Sign-in/Science Academy Logo 1.svg";
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 
-const Signin = () => {
+const SignUpAlternative = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const { loginUser, googleSignin, facebookSignin } = useContext(AuthContext);
+  const { createUser, googleSignin, facebookSignin } =
+    useContext(AuthContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -16,7 +17,7 @@ const Signin = () => {
     const email = form.email.value;
     const password = form.password.value;
 
-    loginUser(email, password)
+    createUser(email, password)
       .then((res) => {
         console.log(res);
       })
@@ -46,7 +47,7 @@ const Signin = () => {
         {/* <img className="mb-[68px]" src={logo} alt="logo" /> */}
         <div className="flex flex-col items-center gap-5 pb-5">
           <img className="" src={logo} alt="logo" />
-          <h1 className="text-2xl font-semibold">SignIn</h1>
+          <h1 className="text-2xl font-semibold">SignUp</h1>
         </div>
         {/* form */}
         <form onSubmit={handleSubmit}>
@@ -68,7 +69,7 @@ const Signin = () => {
           {/* submit button */}
           <input
             type="submit"
-            value="Sign In"
+            value="Sign Up"
             className="mt-[22px] w-full h-[50px] bg-[#3758F9] rounded-md font-medium text-white hover:bg-[#3757f9f8] hover:font-semibold cursor-pointer transition-all ease-in-out duration-300"
           />
         </form>
@@ -144,11 +145,11 @@ const Signin = () => {
 
         {/* forget pw and not a member */}
         <div className="text-center space-y-2">
-          <p className="cursor-pointer">Forget Password?</p>
+          {/* <p className="cursor-pointer">Forget Password?</p> */}
           <p className="text-[#8899A8]">
-            Not a member yet?
+            Already a member yet?
             <span className="text-[#3758F9] ml-1">
-              <Link to={"/signup"}>Sign Up</Link>
+              <Link to={"/signin"}>Sign in</Link>
             </span>
           </p>
         </div>
@@ -157,4 +158,4 @@ const Signin = () => {
   );
 };
 
-export default Signin;
+export default SignUpAlternative;
