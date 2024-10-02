@@ -8,6 +8,7 @@ import PracticeTest from "../Pages/PracticeTest/PracticeTest";
 import SelectMaterial from "../Pages/PracticeTest/SelectMaterial/SelectMaterial";
 import ContentSummery from "../Pages/PracticeTest/ContentSummery/ContentSummery";
 import Home from "../pages/Home";
+import DetailsCourse from "../Pages/VideoSolutions/DetailsCourse/DetailsCourse";
 import Signin from "../Pages/Signin/Signin";
 import Membership from "../Pages/Membership and Pricing/Membership";
 import PaymentForm from "../Pages/Membership and Pricing/PaymentForm/PaymentForm";
@@ -33,6 +34,10 @@ export const router = createBrowserRouter([
       {
         path: "/profile/video-solutions",
         element: <VideoSolutions />,
+      },
+      {
+        path: "/profile/video-solutions/:id",
+        element: <DetailsCourse />,
       },
       {
         path: "/profile/practice-test",
