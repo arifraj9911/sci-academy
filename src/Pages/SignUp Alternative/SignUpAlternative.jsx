@@ -2,13 +2,13 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "./../../assets/images/Sign-in/Science Academy Logo 1.svg";
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const SignUpAlternative = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const { createUser, googleSignin, facebookSignin } =
-    useContext(AuthContext);
+  const { createUser, googleSignin, facebookSignin } = useContext(AuthContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,19 +18,53 @@ const SignUpAlternative = () => {
     const password = form.password.value;
 
     createUser(email, password)
-      .then((res) => {
-        console.log(res);
+      .then(() => {
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Signup Success",
+          showConfirmButton: false,
+          timer: 1500,
+        }).then(() => {
+          navigate("/user/home");
+        });
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        Swal.fire({
+          position: "center",
+          icon: "Error",
+          title: "couldn't signup!",
+          text: `Error : ${error.message}`,
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      });
     // console.log(email, password);
   };
 
   const handleGoogleLogin = () => {
     googleSignin()
-      .then((res) => {
-        console.log(res);
+      .then(() => {
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Signup Success",
+          showConfirmButton: false,
+          timer: 1500,
+        }).then(() => {
+          navigate("/user/home");
+        });
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        Swal.fire({
+          position: "center",
+          icon: "Error",
+          title: "couldn't signup!",
+          text: `Error : ${error.message}`,
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      });
   };
 
   const handleFacebookLogin = () => {

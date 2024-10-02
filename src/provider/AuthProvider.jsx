@@ -8,11 +8,13 @@ import {
   signOut,
   updateProfile,
 } from "firebase/auth";
-import { app } from "../firebase/Firebase.config";
+// import { app } from "../firebase/Firebase.config";
 import { GoogleAuthProvider, FacebookAuthProvider } from "firebase/auth";
+import app from "../firebase/Firebase.config";
 
 export const AuthContext = createContext(null);
 const auth = getAuth(app);
+// console.log("Firebase Auth Object:", auth);
 
 // google provider
 const googleProvider = new GoogleAuthProvider();
@@ -56,12 +58,12 @@ const AuthProvider = ({ children }) => {
 
   // user state
   useEffect(() => {
-    const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
       setLoading(false);
     });
     return () => {
-      unSubscribe();
+      unsubscribe();
     };
   }, []);
 
@@ -73,7 +75,7 @@ const AuthProvider = ({ children }) => {
     facebookSignin,
     user,
     loading,
-    setLoading
+    setLoading,
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>

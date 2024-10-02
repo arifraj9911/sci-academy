@@ -2,6 +2,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "./../../assets/images/Sign-in/Science Academy Logo 1.svg";
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const Signin = () => {
   const navigate = useNavigate();
@@ -18,18 +19,52 @@ const Signin = () => {
 
     loginUser(email, password)
       .then((res) => {
-        console.log(res);
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Signin Success",
+          showConfirmButton: false,
+          timer: 1500,
+        }).then(() => {
+          navigate("/user/home");
+        });
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        Swal.fire({
+          position: "center",
+          icon: "Error",
+          title: "couldn't signin!",
+          text: `Error : ${error.message}`,
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      });
     // console.log(email, password);
   };
 
   const handleGoogleLogin = () => {
     googleSignin()
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((error) => console.log(error));
+    .then((res) => {
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Signin Success",
+        showConfirmButton: false,
+        timer: 1500,
+      }).then(() => {
+        navigate("/user/home");
+      });
+    })
+    .catch((error) => {
+      Swal.fire({
+        position: "center",
+        icon: "Error",
+        title: "couldn't signin!",
+        text: `Error : ${error.message}`,
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    });
   };
 
   const handleFacebookLogin = () => {
