@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
+import Signup from "../Pages/SIgnup/Signup";
 import VideoSolutions from "../Pages/VideoSolutions/VideoSolutions";
 import Feedback from "../Pages/Feedback/Feedback";
 import About from "../Pages/About/About";
@@ -8,6 +9,10 @@ import SelectMaterial from "../Pages/PracticeTest/SelectMaterial/SelectMaterial"
 import ContentSummery from "../Pages/PracticeTest/ContentSummery/ContentSummery";
 import Home from "../pages/Home";
 import DetailsCourse from "../Pages/VideoSolutions/DetailsCourse/DetailsCourse";
+import Signin from "../Pages/Signin/Signin";
+import Membership from "../Pages/Membership and Pricing/Membership";
+import PaymentForm from "../Pages/Membership and Pricing/PaymentForm/PaymentForm";
+import ProfileHome from "../Pages/Profile Home/ProfileHome";
 
 export const router = createBrowserRouter([
   {
@@ -20,7 +25,7 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/profile",
-        element: <div>Home Page</div>,
+        element: <ProfileHome></ProfileHome>,
       },
       {
         path: "/profile/study-materials",
@@ -51,6 +56,14 @@ export const router = createBrowserRouter([
         element: <div>Exam Centre</div>,
       },
       {
+        path: "/profile/membership",
+        element: <Membership></Membership>
+      },
+      {
+        path: "/profile/membership/payment",
+        element: <PaymentForm></PaymentForm>
+      },
+      {
         path: "/profile/about",
         element: <About />,
       },
@@ -71,11 +84,11 @@ export const router = createBrowserRouter([
     element: <div>404 Not Found</div>,
   },
   {
-    path: "/login",
-    element: <div>Login</div>,
+    path: "/signin",
+    element: <Signin></Signin>,
   },
   {
     path: "/signup",
-    element: <div>Signup</div>,
+    element: <Signup></Signup>,
   },
 ]);
