@@ -1,4 +1,5 @@
 import blogPicture from "./../assets/images/blogPicture.png";
+import blogPicture2 from "./../assets/images/blogPicture2.png";
 
 const blogPostsData = [
   {
@@ -9,10 +10,10 @@ const blogPostsData = [
     short_description:
       "Lorem ipsum dolor sit amet consectetur. Velit et eget nam lorem. Imperdiet in adipiscing venenatis purus vitae.",
     content:
-      "Detailed content about explaining why you're the right fit for the job goes here.",
+      "Detailed content about explaining why you're the right fit for the job goes here.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque veniam, quos architecto iusto reiciendis sunt repellendus perspiciatis iste nisi modi beatae porro repudiandae tenetur corrupti iure cum vitae, esse ex! Delectus hic cum voluptas animi rem magnam reiciendis quae magni. Aut mollitia distinctio hic blanditiis magni, necessitatibus ipsam saepe, quisquam illo, deleniti pariatur laudantium ipsa ad inventore totam eaque! Veritatis iste id exercitationem in neque! Ad nemo saepe rem. Reprehenderit incidunt illo natus a ipsa qui! Recusandae possimus nostrum, quisquam ipsa minima cupiditate tempore perferendis debitis reprehenderit corporis totam sint, delectus inventore fugit alias optio quibusdam eaque officiis. Molestias, asperiores.",
     uploaded_on: new Date("2022-08-15").getTime(), // Convert date to timestamp
     videos: [], // No videos for now
-    images: [blogPicture], // Use placeholder image
+    images: [blogPicture, blogPicture2], // Use placeholder image
     likes: 1,
   },
   {
@@ -25,7 +26,7 @@ const blogPostsData = [
     content: "Full content about highlighting skills in a resume goes here.",
     uploaded_on: new Date("2022-08-15").getTime(),
     videos: [],
-    images: [blogPicture],
+    images: [blogPicture, blogPicture2],
     likes: 1,
   },
   {
@@ -38,7 +39,7 @@ const blogPostsData = [
     content: "Content about mastering behavioral interview questions.",
     uploaded_on: new Date("2022-09-18").getTime(),
     videos: [],
-    images: [blogPicture],
+    images: [blogPicture, blogPicture2],
     likes: 1,
   },
   {
@@ -50,7 +51,7 @@ const blogPostsData = [
     content: "Content about top questions to ask during an interview.",
     uploaded_on: new Date("2022-09-20").getTime(),
     videos: [],
-    images: [blogPicture],
+    images: [blogPicture, blogPicture2],
     likes: 1,
   },
   {
@@ -62,7 +63,7 @@ const blogPostsData = [
     content: "Detailed content about effective work-from-home tips.",
     uploaded_on: new Date("2022-10-25").getTime(),
     videos: [],
-    images: [blogPicture],
+    images: [blogPicture, blogPicture2],
     likes: 1,
   },
   {
@@ -75,7 +76,7 @@ const blogPostsData = [
     content: "Content about setting up a productive home office space.",
     uploaded_on: new Date("2022-10-30").getTime(),
     videos: [],
-    images: [blogPicture],
+    images: [blogPicture, blogPicture2],
     likes: 1,
   },
   {
@@ -88,7 +89,7 @@ const blogPostsData = [
     content: "Content on landing a dream job in tech.",
     uploaded_on: new Date("2022-11-10").getTime(),
     videos: [],
-    images: [blogPicture],
+    images: [blogPicture, blogPicture2],
     likes: 1,
   },
   {
@@ -102,7 +103,7 @@ const blogPostsData = [
       "A success story about transitioning from freelancing to full-time employment.",
     uploaded_on: new Date("2022-11-20").getTime(),
     videos: [],
-    images: [blogPicture],
+    images: [blogPicture, blogPicture2],
     likes: 1,
   },
   {
@@ -115,7 +116,7 @@ const blogPostsData = [
     content: "Content on top online courses to upskill in 2023.",
     uploaded_on: new Date("2022-12-01").getTime(),
     videos: [],
-    images: [blogPicture],
+    images: [blogPicture, blogPicture2],
     likes: 1,
   },
   {
@@ -128,7 +129,7 @@ const blogPostsData = [
     content: "Content about the best certifications to boost your career.",
     uploaded_on: new Date("2022-12-10").getTime(),
     videos: [],
-    images: [blogPicture],
+    images: [blogPicture, blogPicture2],
     likes: 1,
   },
   {
@@ -141,7 +142,7 @@ const blogPostsData = [
     content: "Content about preparing for online exams.",
     uploaded_on: new Date("2022-12-15").getTime(),
     videos: [],
-    images: [blogPicture],
+    images: [blogPicture, blogPicture2],
     likes: 1,
   },
   {
@@ -154,7 +155,7 @@ const blogPostsData = [
     content: "Content on time management for exams.",
     uploaded_on: new Date("2022-12-20").getTime(),
     videos: [],
-    images: [blogPicture],
+    images: [blogPicture, blogPicture2],
     likes: 1,
   },
 ];

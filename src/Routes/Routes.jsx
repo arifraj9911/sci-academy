@@ -12,6 +12,7 @@ import Signin from "../Pages/Signin/Signin";
 import Membership from "../Pages/Membership and Pricing/Membership";
 import PaymentForm from "../Pages/Membership and Pricing/PaymentForm/PaymentForm";
 import ProfileHome from "../Pages/Profile Home/ProfileHome";
+import ProfileBlogDetails from "../Pages/Profile Blog Details/ProfileBlogDetails";
 
 export const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ export const router = createBrowserRouter([
       {
         path: "/profile",
         element: <ProfileHome></ProfileHome>,
+      },
+      {
+        path: "/profile/blog-details/:id",
+        element: <ProfileBlogDetails></ProfileBlogDetails>,
       },
       {
         path: "/profile/study-materials",
