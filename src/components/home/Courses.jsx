@@ -13,6 +13,7 @@ import head3 from "../../assets/head3.png";
 import head4 from "../../assets/head4.png";
 import head5 from "../../assets/head5.png";
 import right from "../../assets/right-arrow.svg";
+import left from "../../assets/left-arrow.svg";
 const sliderData = [
   {
     image: swiper1,
@@ -141,7 +142,7 @@ const Courses = () => {
           ))}
         </Swiper>
         <div className="custom-prev absolute -left-24 top-1/2 transform -translate-y-1/2 flex items-center justify-center rounded-full z-10 cursor-pointer shadow-lg">
-          <img src={right} alt="" className=" rotate-180" />
+          <img src={left} alt="" />
         </div>
         <div className="custom-next absolute -right-24 top-1/2 transform -translate-y-1/2 flex items-center justify-center rounded-full z-10 cursor-pointer shadow-lg">
           <img src={right} alt="" />
