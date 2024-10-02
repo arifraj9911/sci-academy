@@ -30,7 +30,7 @@ export default {
         "min-screen-desktop": "1440px",
       },
       backgroundImage: {
-        "hero-pattern": "url('./src/assets/header-bg.svg')",
+        "hero-pattern": "url('./src/assets/headerBG.svg')",
       },
       boxShadow: {
         "custom-lg": "0px 70px 70px 0px rgba(0, 0, 0, 0.07)",

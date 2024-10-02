@@ -65,7 +65,7 @@ const sliderData = [
 ];
 const Courses = () => {
   return (
-    <div className="pt-[14rem] pb-[5.5rem]">
+    <div className="pt-[9rem] pb-[5.5rem]">
       <p className=" text-primary-heading font-poppins text-base">
         Lorem ipsum dolor{" "}
       </p>

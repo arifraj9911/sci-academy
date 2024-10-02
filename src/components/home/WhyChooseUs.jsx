@@ -3,8 +3,8 @@ import playButton from "../../assets/play-circle.svg";
 
 const WhyChooseUs = () => {
   return (
-    <div className="mt-[9.38rem] max-w-screen-desktop mx-auto">
-      <div className="w-[34rem] mx-auto">
+    <div className="mt-[120px] max-w-screen-desktop mx-auto">
+      {/* <div className="w-[34rem] mx-auto">
         <h2 className=" text-primary-heading text-center font-poppins text-[2rem] font-semibold capitalize">
           Why you should choose us?
         </h2>
@@ -12,7 +12,7 @@ const WhyChooseUs = () => {
           Lorem ipsum dolor sit amet consectetur. Tortor viverra donec nibh
           ipsum venenatis neque interdum. Porta rhoncus tellus dolor vel
         </p>
-      </div>
+      </div> */}
       <div className=" mt-[3.75rem] flex items-center gap-20">
         <div className="w-[59rem] h-auto relative">
           <img src={wcs} alt="wcs img" />
@@ -20,7 +20,10 @@ const WhyChooseUs = () => {
             <img src={playButton} alt="play button" />
           </button>
         </div>
-        <div className="flex flex-col items-start gap-8">
+        <div className="flex flex-col items-start gap-[32px]">
+          <h1 className="text-primary-heading font-poppins text-[32px] font-semibold capitalize">
+            About Us
+          </h1>
           <div className="flex items-start gap-6">
             <div>
               <div className="w-[2.67rem] h-[2.67rem] rounded-full border border-primary-blue flex items-center justify-center text-primary-blue text-center font-poppins text-base font-semibold">

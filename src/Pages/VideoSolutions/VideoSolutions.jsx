@@ -6,7 +6,8 @@ import arrowRight from "../../assets/images/arrow_right.svg";
 import arrowLeft from "../../assets/images/Arrow_Left_LG.svg";
 import threeDot from "../../assets/images/More_Vertical.svg";
 import videosData from "../../data/videosData";
-import "./VideoSolutions.css";
+
+import { useNavigate } from "react-router-dom";
 
 const categories = ["All", "Tests", "Exams", "Textbook"];
 const courses = ["CSE", "EEE", "ICT", "CIVIL"];
@@ -22,6 +23,16 @@ const VideoSolutions = () => {
   const [toggleCourse, setToggleCourse] = useState(false);
   const [toggleSub, setToggleSub] = useState(false);
   const [toggleView, setToggleView] = useState(false);
+
+  const navigate = useNavigate();
+
+  const handleGridDetails = (id) => {
+    navigate(`/profile/video-solutions/${id}`);
+  };
+
+  const handleListDetails = (id) => {
+    navigate(`/profile/video-solutions/${id}`);
+  };
 
   return (
     <div>
@@ -172,7 +183,10 @@ const VideoSolutions = () => {
                   src={video.youtube_link}
                   allowFullScreen
                 ></iframe>
-                <button className="bg-[#111928CC] -mt-[1px] flex items-center font-poppins font-semibold text-left rounded-b-lg py-2 gap-2 w-full   px-6 text-white">
+                <button
+                  onClick={() => handleGridDetails(video?.id)}
+                  className="bg-[#111928CC] -mt-[1px] flex items-center font-poppins font-semibold text-left rounded-b-lg py-2 gap-2 w-full   px-6 text-white"
+                >
                   View Details
                   <img src={arrowRight} alt="arrow_right" />
                 </button>
@@ -186,33 +200,33 @@ const VideoSolutions = () => {
           <div className=" mb-8 gap-4 flex flex-col  ">
             {videosData?.map((video) => (
               <div key={video?.id} className="flex justify-between">
-                <div
-                className=" w-full gap gap-6 flex items-center"
-                
-              >
-                <iframe
-                  className="rounded-lg w-1/3 "
-                  //   width="248"
-                  height="184"
-                  src={video?.youtube_link}
-                  allowFullScreen
-                ></iframe>
-                <div>
-                  <h4 className="text-xl font-inter font-medium text-[#111928]">
-                    {video?.subject_title}
-                  </h4>
-                  <div className="mt-4 mb-6 text-primary-text flex items-center gap-2 text-[16px]">
+                <div className=" w-full gap gap-6 flex items-center">
+                  <iframe
+                    className="rounded-lg w-1/3 "
+                    //   width="248"
+                    height="184"
+                    src={video?.youtube_link}
+                    allowFullScreen
+                  ></iframe>
+                  <div>
+                    <h4 className="text-xl font-inter font-medium text-[#111928]">
+                      {video?.subject_title}
+                    </h4>
+                    <div className="mt-4 mb-6 text-primary-text flex items-center gap-2 text-[16px]">
                       <span>{video?.subject_name} </span>
                       <span className="dot-before">{video?.total_views}</span>
                       <span className="dot-before">{video?.uploaded_time}</span>
                     </div>
-                  <button className="font-poppins flex items-center gap-3 text-[#111928] font-semibold">
-                    View Details
-                    <img src={arrowLeft} alt="arrow_right" />
-                  </button>
+                    <button
+                      onClick={() => handleListDetails(video?.id)}
+                      className="font-poppins flex items-center gap-3 text-[#111928] font-semibold"
+                    >
+                      View Details
+                      <img src={arrowLeft} alt="arrow_right" />
+                    </button>
+                  </div>
                 </div>
-              </div>
-              <img src={threeDot} alt="three_dot" />
+                <img src={threeDot} alt="three_dot" />
               </div>
             ))}
           </div>
