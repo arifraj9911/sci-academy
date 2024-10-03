@@ -6,6 +6,7 @@ import progress from "../../assets/progress.svg";
 import dot from "../../assets/dot.svg";
 import time from "../../assets/time.svg";
 import graph from "../../assets/graph.svg";
+import UserNav from "./UserNav";
 
 const quizzes = [
   {
@@ -33,6 +34,7 @@ const quizzes = [
 const UserLanding = () => {
   return (
     <div className="bg-[#F6F9FF]">
+      <UserNav />
       <div className="">
         <h1 className="text-[#1A416A] font-inter text-[64px] font-bold leading-[64px] text-center pt-[180px]">
           Lorem ipsum dolor sit amet <br />
