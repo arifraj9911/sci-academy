@@ -18,6 +18,7 @@ import SignUpAlternative from "../Pages/SignUp Alternative/SignUpAlternative";
 import PrivateRoute from "./PrivateRoute";
 import UserLanding from "../Pages/User Landing/UserLanding";
 import Courses from "../pages/Courses/Courses";
+import Faq from "../Pages/FAQ/Faq";
 
 export const router = createBrowserRouter([
   {
@@ -95,6 +96,10 @@ export const router = createBrowserRouter([
       {
         path: "/profile/admin/courses",
         element: <Courses />,
+      },
+      {
+        path: "/profile/faq",
+        element: <Faq />,
       },
       {
         // 404 not found
