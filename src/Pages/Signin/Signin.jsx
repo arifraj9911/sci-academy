@@ -1,14 +1,14 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "./../../assets/images/Sign-in/Science Academy Logo 1.svg";
-import { useContext } from "react";
-import { AuthContext } from "../../provider/AuthProvider";
-import Swal from "sweetalert2";
+// import { useContext } from "react";
+// import { AuthContext } from "../../provider/AuthProvider";
+// import Swal from "sweetalert2";
 
 const Signin = () => {
-  const navigate = useNavigate();
-  const location = useLocation();
+  // const navigate = useNavigate();
+  // const location = useLocation();
 
-  const { loginUser, googleSignin, facebookSignin } = useContext(AuthContext);
+  // const { loginUser, googleSignin, facebookSignin } = useContext(AuthContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -17,63 +17,63 @@ const Signin = () => {
     const email = form.email.value;
     const password = form.password.value;
 
-    loginUser(email, password)
-      .then((res) => {
-        Swal.fire({
-          position: "center",
-          icon: "success",
-          title: "Signin Success",
-          showConfirmButton: false,
-          timer: 1500,
-        }).then(() => {
-          navigate("/user/home");
-        });
-      })
-      .catch((error) => {
-        Swal.fire({
-          position: "center",
-          icon: "Error",
-          title: "couldn't signin!",
-          text: `Error : ${error.message}`,
-          showConfirmButton: false,
-          timer: 1500,
-        });
-      });
+    // loginUser(email, password)
+    //   .then((res) => {
+    //     Swal.fire({
+    //       position: "center",
+    //       icon: "success",
+    //       title: "Signin Success",
+    //       showConfirmButton: false,
+    //       timer: 1500,
+    //     }).then(() => {
+    //       navigate("/user/home");
+    //     });
+    //   })
+    //   .catch((error) => {
+    //     Swal.fire({
+    //       position: "center",
+    //       icon: "Error",
+    //       title: "couldn't signin!",
+    //       text: `Error : ${error.message}`,
+    //       showConfirmButton: false,
+    //       timer: 1500,
+    //     });
+    //   });
     // console.log(email, password);
   };
 
-  const handleGoogleLogin = () => {
-    googleSignin()
-    .then((res) => {
-      Swal.fire({
-        position: "center",
-        icon: "success",
-        title: "Signin Success",
-        showConfirmButton: false,
-        timer: 1500,
-      }).then(() => {
-        navigate("/user/home");
-      });
-    })
-    .catch((error) => {
-      Swal.fire({
-        position: "center",
-        icon: "Error",
-        title: "couldn't signin!",
-        text: `Error : ${error.message}`,
-        showConfirmButton: false,
-        timer: 1500,
-      });
-    });
-  };
+  // const handleGoogleLogin = () => {
+  //   googleSignin()
+  //   .then((res) => {
+  //     Swal.fire({
+  //       position: "center",
+  //       icon: "success",
+  //       title: "Signin Success",
+  //       showConfirmButton: false,
+  //       timer: 1500,
+  //     }).then(() => {
+  //       navigate("/user/home");
+  //     });
+  //   })
+  //   .catch((error) => {
+  //     Swal.fire({
+  //       position: "center",
+  //       icon: "Error",
+  //       title: "couldn't signin!",
+  //       text: `Error : ${error.message}`,
+  //       showConfirmButton: false,
+  //       timer: 1500,
+  //     });
+  //   });
+  // };
 
-  const handleFacebookLogin = () => {
-    facebookSignin()
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((error) => console.log(error));
-  };
+  // const handleFacebookLogin = () => {
+  //   facebookSignin()
+  //     .then((res) => {
+  //       console.log(res);
+  //     })
+  //     .catch((error) => console.log(error));
+  // };
   return (
     <div className="bg-[#F7F8FA] min-h-screen flex items-center justify-center">
       <div className="w-[520px] h-[646px] border bg-white rounded-lg shadow-sm p-[60px] font-inter">
@@ -119,7 +119,7 @@ const Signin = () => {
         <div className="grid grid-cols-3 gap-5 my-8">
           {/* facebook */}
           <button
-            onClick={handleFacebookLogin}
+            // onClick={handleFacebookLogin}
             className="bg-[#4064AC] rounded-md flex items-center justify-center h-[45px]"
           >
             <svg
@@ -152,7 +152,7 @@ const Signin = () => {
           </button>
           {/* Google */}
           <button
-            onClick={handleGoogleLogin}
+            // onClick={handleGoogleLogin}
             className="bg-[#D64937] rounded-md flex items-center justify-center h-[45px]"
           >
             <svg
