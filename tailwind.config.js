@@ -21,6 +21,11 @@ export default {
         boulder: "#767676",
         sky_blue: "#3758F91A",
         mystic: "#DFE4EA",
+        gray_chateau:'#A3A7B0',
+        dove_gray:'#727272',
+        mercury:'#e4e4e4',
+        athens_gray:"#F3F4F6",
+        biscay:'#1A416A',
       },
       maxWidth: {
         "screen-mak": "1900px",

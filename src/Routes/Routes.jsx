@@ -17,6 +17,7 @@ import ProfileBlogDetails from "../Pages/Profile Blog Details/ProfileBlogDetails
 import SignUpAlternative from "../Pages/SignUp Alternative/SignUpAlternative";
 import PrivateRoute from "./PrivateRoute";
 import UserLanding from "../Pages/User Landing/UserLanding";
+import Courses from "../pages/Courses/Courses";
 
 export const router = createBrowserRouter([
   {
@@ -90,6 +91,10 @@ export const router = createBrowserRouter([
       {
         path: "/profile/feedback",
         element: <Feedback />,
+      },
+      {
+        path: "/profile/admin/courses",
+        element: <Courses />,
       },
       {
         // 404 not found
