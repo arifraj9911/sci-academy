@@ -15,7 +15,7 @@ import PaymentForm from "../Pages/Membership and Pricing/PaymentForm/PaymentForm
 import ProfileHome from "../Pages/Profile Home/ProfileHome";
 import ProfileBlogDetails from "../Pages/Profile Blog Details/ProfileBlogDetails";
 import SignUpAlternative from "../Pages/SignUp Alternative/SignUpAlternative";
-import PrivateRoute from "./PrivateRoute";
+// import PrivateRoute from "./PrivateRoute";
 import UserLanding from "../Pages/User Landing/UserLanding";
 import Courses from "../pages/Courses/Courses";
 import Faq from "../Pages/FAQ/Faq";
@@ -27,19 +27,11 @@ export const router = createBrowserRouter([
   },
   {
     path: "/user/home",
-    element: (
-      <PrivateRoute>
-        <UserLanding></UserLanding>
-      </PrivateRoute>
-    ),
+    element: <UserLanding></UserLanding>,
   },
   {
     path: "/profile",
-    element: (
-      <PrivateRoute>
-        <Main />
-      </PrivateRoute>
-    ),
+    element: <Main />,
     children: [
       {
         path: "/profile",
