@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import SaveButton from "../../components/admin/SaveButton";
 
 const Courses = () => {
   return (
@@ -143,12 +144,7 @@ const Courses = () => {
             </div>
 
             {/* Save Button */}
-            <button
-              type="submit"
-              className="w-full bg-biscay text-white font-inter text-sm font-medium py-2 px-3  rounded"
-            >
-              Save
-            </button>
+            <SaveButton />
           </form>
         </main>
       </div>

@@ -19,7 +19,7 @@ import SignUpAlternative from "../Pages/SignUp Alternative/SignUpAlternative";
 import UserLanding from "../Pages/User Landing/UserLanding";
 import Courses from "../pages/Courses/Courses";
 import Faq from "../Pages/FAQ/Faq";
-
+import PracticeTestAdmin from "../pages/Practice Test Admin/PracticeTest";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -88,6 +88,10 @@ export const router = createBrowserRouter([
       {
         path: "/profile/admin/courses",
         element: <Courses />,
+      },
+      {
+        path: "/profile/admin/practice-test",
+        element: <PracticeTestAdmin />,
       },
       {
         path: "/profile/faq",
