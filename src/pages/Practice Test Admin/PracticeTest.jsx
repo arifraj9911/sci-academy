@@ -135,7 +135,7 @@ const PracticeTest = () => {
               type="text"
               value={questionSource}
               onChange={(e) => setQuestionSource(e.target.value)}
-              className="w-full p-2 border border-gray-300 rounded-md"
+              className="block w-full px-5 py-3 text-primary-heading font-inter text-base border border-primary-blue bg-athens_gray rounded-md mb-4 focus:outline-none"
               placeholder="Question is from 2019 exam"
             />
           </div>
@@ -193,12 +193,15 @@ const PracticeTest = () => {
               </div>
 
               {/* Upload Section */}
-              <div className="mt-4 mb-4 flex flex-col items-center justify-center border-dashed border border-purple-400 p-6 ">
+              <label
+                htmlFor="file"
+                className="mt-4 mb-4 flex flex-col items-center justify-center border-dashed border border-purple-400 p-6 "
+              >
                 <div className="text-gray-400 h-32 flex justify-center items-center">
                   <AiOutlineCloudUpload size={48} />
                 </div>
-                <input type="file" className="hidden" />
-              </div>
+                <input id="file" type="file" className="hidden" />
+              </label>
               {/* Action Buttons */}
               <div className="flex justify-between">
                 <button className="bg-transparent px-4 py-2 rounded-md border text-wood_smoke font-inter text-sm font-medium">
