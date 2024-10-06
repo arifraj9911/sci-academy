@@ -20,6 +20,7 @@ import UserLanding from "../Pages/User Landing/UserLanding";
 import Courses from "../pages/Courses/Courses";
 import Faq from "../Pages/FAQ/Faq";
 import PracticeTestAdmin from "../pages/Practice Test Admin/PracticeTest";
+import StudyMaterial from "../pages/Study Material/StudyMaterial";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -92,6 +93,10 @@ export const router = createBrowserRouter([
       {
         path: "/profile/admin/practice-test",
         element: <PracticeTestAdmin />,
+      },
+      {
+        path: "/profile/admin/study-material",
+        element: <StudyMaterial />,
       },
       {
         path: "/profile/faq",
