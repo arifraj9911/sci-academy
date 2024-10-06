@@ -6,36 +6,11 @@ import { NavLink } from "react-router-dom";
 import SaveButton from "../../components/admin/SaveButton";
 
 const StudyMaterial = () => {
-  const [questionSource, setQuestionSource] = useState("");
-  const [questionText, setQuestionText] = useState("");
   const [videoTitle, setVideoTitle] = useState("");
-  const [hintsCount, setHintsCount] = useState(0);
-  const [hints, setHints] = useState(Array(6).fill(""));
-  const [correctAnswer, setCorrectAnswer] = useState("");
-  const [acceptedDeviation, setAcceptedDeviation] = useState({
-    from: "",
-    to: "",
-  });
-
-  const handleHintsChange = (e) => {
-    const value = parseInt(e.target.value, 10);
-    setHintsCount(value);
-  };
-
-  const handleHintInputChange = (index, value) => {
-    const newHints = [...hints];
-    newHints[index] = value;
-    setHints(newHints);
-  };
 
   const handleSave = () => {
     const formData = {
-      questionSource,
-      questionText,
       videoTitle,
-      hints: hints.slice(0, hintsCount),
-      correctAnswer,
-      acceptedDeviation,
     };
     console.log("Form Data", formData);
   };
