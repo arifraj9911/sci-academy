@@ -76,7 +76,7 @@ const Signin = () => {
   // };
   return (
     <div className="bg-[#F7F8FA] min-h-screen flex items-center justify-center">
-      <div className="w-[520px] h-[646px] border bg-white rounded-lg shadow-sm p-[60px] font-inter">
+      <div className="w-[90%] md:w-[520px] md:h-[646px] border bg-white rounded-lg shadow-sm p-5 md:p-[60px] font-inter">
         {/* img/logo */}
         {/* <img className="mb-[68px]" src={logo} alt="logo" /> */}
         <div className="flex flex-col items-center gap-5 pb-5">
@@ -104,21 +104,22 @@ const Signin = () => {
           <input
             type="submit"
             value="Sign In"
-            className="mt-[22px] w-full h-[50px] bg-[#3758F9] rounded-md font-medium text-white hover:bg-[#3757f9f8] hover:font-semibold cursor-pointer transition-all ease-in-out duration-300"
+            className="mt-[22px] w-full h-[50px] bg-[#1A416A] rounded-md font-medium text-white hover:bg-[#1A416A] hover:font-semibold cursor-pointer transition-all ease-in-out duration-300"
           />
         </form>
 
         {/* connect with google, twitter, fb */}
         {/* connect with line */}
-        <div className="flex items-center justify-center mt-9">
+        <div className="flex items-center justify-center mt-6 md:mt-9">
           <div className="border-t border-gray-300 flex-grow"></div>
           <span className="mx-4 text-[#8899A8]">Connect With</span>
           <div className="border-t border-gray-300 flex-grow"></div>
         </div>
         {/* buttons */}
-        <div className="grid grid-cols-3 gap-5 my-8">
+        <div className="my-5 md:my-8">
+        {/* <div className="grid grid-cols-3 gap-5 my-8"> */}
           {/* facebook */}
-          <button
+          {/* <button
             // onClick={handleFacebookLogin}
             className="bg-[#4064AC] rounded-md flex items-center justify-center h-[45px]"
           >
@@ -134,9 +135,9 @@ const Signin = () => {
                 fill="white"
               />
             </svg>
-          </button>
+          </button> */}
           {/* Twitter */}
-          <button className="bg-[#1C9CEA] rounded-md flex items-center justify-center h-[45px]">
+          {/* <button className="bg-[#1C9CEA] rounded-md flex items-center justify-center h-[45px]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -149,11 +150,11 @@ const Signin = () => {
                 fill="white"
               />
             </svg>
-          </button>
+          </button> */}
           {/* Google */}
           <button
             // onClick={handleGoogleLogin}
-            className="bg-[#D64937] rounded-md flex items-center justify-center h-[45px]"
+            className="bg-[#D64937] rounded-md flex items-center justify-center h-[45px] w-full"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

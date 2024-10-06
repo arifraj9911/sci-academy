@@ -139,7 +139,7 @@ const ProfileHome = () => {
           />
           {/* button */}
           <button
-            className="absolute bg-[#3860E2] text-white px-[18px] lg:px-10 py-1.5 lg:py-2.5 rounded-full right-1.5 md:right-1 lg:right-1.5 top-1/2 transform -translate-y-1/2 text-sm md:text-base"
+            className="absolute bg-[#1A416A] text-white px-[18px] lg:px-10 py-1.5 lg:py-2.5 rounded-full right-1.5 md:right-1 lg:right-1.5 top-1/2 transform -translate-y-1/2 text-sm md:text-base"
             onClick={handleSearch}
           >
             Search
