@@ -79,7 +79,7 @@ const Pricing = ({ currentSubscription }) => {
             </li>
           </ul>
           {/* Button */}
-          <button className="mt-6 w-full h-[50px] text-[#3758F9] border border-[#DFE4EA] hover:bg-[#3758F9] hover:text-white rounded-lg transition-all duration-300 ease-in-out">
+          <button className="mt-6 w-full h-[50px] text-[#1A416A] border border-[#DFE4EA] hover:bg-[#1A416A] hover:text-white rounded-lg transition-all duration-300 ease-in-out">
             Choose Personal
           </button>
         </div>
@@ -120,7 +120,7 @@ const Pricing = ({ currentSubscription }) => {
               <span className="mr-1 text-lg">•</span> 3 Months Support
             </li>
           </ul>
-          <button className="mt-6 w-full h-[50px] text-[#3758F9] border border-[#DFE4EA] hover:bg-[#3758F9] hover:text-white rounded-lg transition-all duration-300 ease-in-out">
+          <button className="mt-6 w-full h-[50px] text-[#1A416A] border border-[#DFE4EA] hover:bg-[#1A416A] hover:text-white rounded-lg transition-all duration-300 ease-in-out">
             Choose Business
           </button>
         </div>
@@ -161,17 +161,17 @@ const Pricing = ({ currentSubscription }) => {
               <span className="mr-1 text-lg">•</span> 3 Months Support
             </li>
           </ul>
-          <button className="mt-6 w-full h-[50px] text-[#3758F9] border border-[#DFE4EA] hover:bg-[#3758F9] hover:text-white rounded-lg transition-all duration-300 ease-in-out">
+          <button className="mt-6 w-full h-[50px] text-[#1A416A] border border-[#DFE4EA] hover:bg-[#1A416A] hover:text-white rounded-lg transition-all duration-300 ease-in-out">
             Choose Professional
           </button>
         </div>
       </div>
-      {isModalOpen && (
+      {/* {isModalOpen && (
         <UnsubscribeModal
           onClose={onClose}
           currentSubscription={currentSubscription}
         ></UnsubscribeModal>
-      )}
+      )} */}
     </div>
   );
 };
