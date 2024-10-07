@@ -99,11 +99,11 @@ const usersData = [
 ];
 const AdminPanel = () => {
   const buttons = [
-    { label: "All Courses", link: "#" },
-    { label: "Study Material", link: "#" },
-    { label: "Video Solution", link: "#" },
+    { label: "All Courses", link: "/profile/admin/courses" },
+    { label: "Study Material", link: "/profile/admin/study-material" },
+    { label: "Video Solution", link: "/profile/admin/video-solution" },
     { label: "Exam Center", link: "#" },
-    { label: "Practice Test", link: "#" },
+    { label: "Practice Test", link: "/profile/admin/practice-test" },
     { label: "Membership", link: "#" },
     { label: "About", link: "#" },
     { label: "FAQ", link: "#" },

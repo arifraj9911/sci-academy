@@ -22,6 +22,7 @@ import Faq from "../Pages/FAQ/Faq";
 import PracticeTestAdmin from "../pages/Practice Test Admin/PracticeTest";
 import StudyMaterial from "../pages/Study Material/StudyMaterial";
 import AdminPanel from "../pages/Admin Panel/AdminPanel";
+import VideoSolution from "../pages/Video Solution/VideoSolution";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -102,6 +103,10 @@ export const router = createBrowserRouter([
       {
         path: "/profile/admin/study-material",
         element: <StudyMaterial />,
+      },
+      {
+        path: "/profile/admin/video-solution",
+        element: <VideoSolution />,
       },
       {
         path: "/profile/faq",
