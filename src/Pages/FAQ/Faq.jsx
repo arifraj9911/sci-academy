@@ -10,10 +10,10 @@ const Faq = () => {
         <h3 className="text-[#3758F9] text-base font-semibold">
           Frequently Asked Questions (FAQ)
         </h3>
-        <h1 className="text-2xl lg:text-[40px] font-semibold mt-1">
+        <h1 className="text-2xl lg:text-[40px] font-semibold mt-1 md:mt-2.5">
           FAQ’s about Science Academy
         </h1>
-        <p className="text-[#637381] text-sm md:text-base max-w-2xl mt-1">
+        <p className="text-[#637381] text-sm md:text-base max-w-2xl mt-1 md:mt-4">
           There are many variations of passages of Lorem Ipsum available but the
           majority have suffered alteration in some form.
         </p>
