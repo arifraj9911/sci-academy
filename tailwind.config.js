@@ -27,6 +27,7 @@ export default {
         athens_gray:"#F3F4F6",
         biscay:'#1A416A',
         wood_smoke:'#09090B',
+        alto:'#dedede',
       },
       maxWidth: {
         "screen-mak": "1900px",
