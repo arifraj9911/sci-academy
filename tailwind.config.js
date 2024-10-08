@@ -30,7 +30,7 @@ export default {
         alto:'#dedede',
       },
       maxWidth: {
-        "screen-mak": "1900px",
+        "screen-mak": "1920px",
         "screen-desktop": "1440px",
       },
       minWidth: {

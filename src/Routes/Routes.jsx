@@ -23,6 +23,7 @@ import PracticeTestAdmin from "../pages/Practice Test Admin/PracticeTest";
 import StudyMaterial from "../pages/Study Material/StudyMaterial";
 import AdminPanel from "../pages/Admin Panel/AdminPanel";
 import VideoSolution from "../pages/Video Solution/VideoSolution";
+import Forum from "../Pages/Forum/Forum";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -111,6 +112,10 @@ export const router = createBrowserRouter([
       {
         path: "/profile/faq",
         element: <Faq />,
+      },
+      {
+        path: "/profile/forum",
+        element: <Forum></Forum>,
       },
       {
         // 404 not found
