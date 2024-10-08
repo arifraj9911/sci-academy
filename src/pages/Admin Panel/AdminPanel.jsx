@@ -1,17 +1,17 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import ArrowUp from "../../assets/adminPanel/Arrow_Up_Right_MD.svg";
-import people from "../../assets/adminPanel/people.svg";
-import trend from "../../assets/adminPanel/trend-up.svg";
-import eye from "../../assets/adminPanel/eye.svg";
-import timer from "../../assets/adminPanel/timer.svg";
-import security from "../../assets/adminPanel/security-time.svg";
+import communication from "../../assets/adminPanel/communication 1.svg";
 import directions from "../../assets/adminPanel/directions 1.svg";
-import monitor from "../../assets/adminPanel/monitor-mobbile.svg";
+import eye from "../../assets/adminPanel/eye.svg";
 import interactivity from "../../assets/adminPanel/interactivity 1.svg";
 import logout from "../../assets/adminPanel/logout 1.svg";
-import communication from "../../assets/adminPanel/communication 1.svg";
+import monitor from "../../assets/adminPanel/monitor-mobbile.svg";
 import More_Horizontal from "../../assets/adminPanel/More_Horizontal.svg";
+import people from "../../assets/adminPanel/people.svg";
+import security from "../../assets/adminPanel/security-time.svg";
+import timer from "../../assets/adminPanel/timer.svg";
+import trend from "../../assets/adminPanel/trend-up.svg";
 import Pagination from "../../components/Pagination";
 
 const usersData = [
@@ -143,26 +143,34 @@ const AdminPanel = () => {
   const indexOfFirstRow = indexOfLastRow - rowsPerPage;
   const currentRows = usersData.slice(indexOfFirstRow, indexOfLastRow);
 
+  const [expandedRows, setExpandedRows] = useState({});
+  const toggleRow = (id) => {
+    setExpandedRows((prevState) => ({
+      ...prevState,
+      [id]: !prevState[id],
+    }));
+  };
+
   return (
-    <div className="pl-[2.25rem] pr-20 pt-20">
-      <h1 className=" text-biscay font-poppins text-[2rem] font-semibold mb-2">
+    <div className="sm:pl-[2.25rem] sm:pr-20 pt-20 px-4">
+      <h1 className=" text-biscay font-poppins text-[1.5rem] sm:text-[2rem] font-semibold mb-2">
         Edit panel
       </h1>
-      <p className=" text-primary-text font-inter text-base mb-8">
+      <p className=" text-primary-text font-inter sm:text-base text-sm mb-8">
         Lorem ipsum dolor sit amet consectetur. Urna magna magna convallis
         tincidunt
       </p>
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-6 mt-8 mb-20">
+      <div className="grid grid-cols-2 md:grid-cols-5 gap-4 sm:gap-6 mt-6 sm:mt-8 mb-10 sm:mb-20">
         {buttons.map((button, index) => (
           <Link
             key={index}
             to={button.link}
-            className="flex justify-between items-center p-1 pl-6 bg-white border border-alto rounded-full"
+            className="flex justify-center sm:justify-between items-center py-2 px-1 sm:p-1 sm:pl-6 bg-white border border-alto rounded-full"
           >
-            <span className=" text-biscay font-poppins text-sm">
+            <span className=" text-biscay font-poppins text-sm text-center">
               {button.label}
             </span>
-            <div className="bg-biscay p-2 rounded-full text-white w-[2.8rem] h-[2.8rem] flex justify-center items-center">
+            <div className="bg-biscay p-2 rounded-full text-white w-[2.8rem] h-[2.8rem] hidden sm:flex justify-center items-center">
               <img src={ArrowUp} alt="" className="w-6 h-6 " />
             </div>
           </Link>
@@ -170,23 +178,25 @@ const AdminPanel = () => {
       </div>
 
       {/* visitors activity  */}
-      <h1 className=" text-biscay font-poppins text-[2rem] font-semibold mb-2 capitalize">
+      <h2 className=" text-biscay font-poppins text-[1.5rem] sm:text-[2rem] font-semibold mb-2 capitalize">
         visitors activity
-      </h1>
-      <p className=" text-primary-text font-inter text-base mb-8">
+      </h2>
+      <p className=" text-primary-text font-inter sm:text-base text-sm mb-8">
         Lorem ipsum dolor sit amet consectetur. Urna magna magna convallis
         tincidunt
       </p>
 
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-6 mt-8 mb-20">
+      <div className="grid grid-cols-2 md:grid-cols-5 gap-4 sm:gap-6 mt-6 sm:mt-8 mb-10 sm:mb-20">
         {stats.map((stat, index) => (
           <div
             key={index}
-            className="flex flex-col items-start p-6 bg-white border border-alto rounded-[1rem]"
+            className="flex flex-col items-start p-4 sm:p-6 bg-white border border-alto rounded-[1rem]"
           >
-            <img src={stat.icon} alt="" />
-            <p className="mt-10 mb-1 font-poppins text-sm">{stat.label}</p>
-            <span className=" text-biscay font-poppins text-[1.75rem] font-bold">
+            <img src={stat.icon} alt="" className="hidden sm:visible" />
+            <p className="mt-4 sm:mt-10 mb-1 font-poppins text-sm">
+              {stat.label}
+            </p>
+            <span className=" text-biscay font-poppins text-[1.25rem] sm:text-[1.75rem] font-bold">
               {stat.value}
             </span>
           </div>
@@ -194,15 +204,15 @@ const AdminPanel = () => {
       </div>
       {/* members activity  */}
 
-      <h1 className=" text-biscay font-poppins text-[2rem] font-semibold mb-2 capitalize">
+      <h2 className=" text-biscay font-poppins text-[1.5rem] sm:text-[2rem] font-semibold mb-2 capitalize">
         members activity
-      </h1>
-      <p className=" text-primary-text font-inter text-base mb-8">
+      </h2>
+      <p className=" text-primary-text font-inter sm:text-base text-sm mb-8">
         Lorem ipsum dolor sit amet consectetur. Urna magna magna convallis
         tincidunt
       </p>
 
-      <div className="overflow-x-auto w-full rounded-[1rem] border border-mystic">
+      <div className="overflow-x-auto w-full rounded-[1rem] border border-mystic hidden sm:block">
         <table className="table w-full ">
           {/* Head */}
           <thead>
@@ -262,6 +272,60 @@ const AdminPanel = () => {
           </tbody>
         </table>
       </div>
+
+      <div className="overflow-x-auto sm:hidden w-full rounded-[1rem] sm:border sm:border-mystic">
+        {currentRows.map((user) => (
+          <div
+            key={user.id}
+            className="my-4 border border-gray-300 rounded-md p-4 bg-white"
+          >
+            <div className="flex justify-between items-center">
+              <div className="flex items-center space-x-4">
+                <div className="avatar">
+                  <div className="mask mask-squircle w-10 h-10 rounded-full">
+                    <img
+                      src={`https://randomuser.me/api/portraits/men/${user.id}.jpg`}
+                      alt="Avatar"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <div className="text-biscay font-poppins text-base">
+                    {user.name}
+                  </div>
+                </div>
+              </div>
+
+              {/* Three dots button */}
+              <button
+                onClick={() => toggleRow(user.id)}
+                className="focus:outline-none"
+              >
+                <img src={More_Horizontal} alt="More" className="w-6 h-6" />
+              </button>
+            </div>
+
+            {/* Expanded user details */}
+            {expandedRows[user.id] && (
+              <div className="mt-4 p-4 bg-gray-50 border-t border-gray-200">
+                <p className="text-biscay font-poppins text-sm mb-2">
+                  <strong>Time spent (Website):</strong> {user.timeSpentWebsite}
+                </p>
+                <p className="text-biscay font-poppins text-sm mb-2">
+                  <strong>Time spent (Page):</strong> {user.timeSpentPage}
+                </p>
+                <p className="text-biscay font-poppins text-sm mb-2">
+                  <strong>Time spent (Ques):</strong> {user.timeSpentQues}
+                </p>
+                <p className="text-biscay font-poppins text-sm">
+                  <strong>Attempts at quiz:</strong> {user.attemptsAtQuiz}
+                </p>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+
       {/* Pagination */}
       <Pagination
         currentPage={currentPage}

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { AiOutlineCloudUpload } from "react-icons/ai";
+import { AiOutlineCloudUpload, AiOutlinePlus } from "react-icons/ai";
 import { IoPencilSharp } from "react-icons/io5";
 import "react-quill/dist/quill.snow.css";
 import { NavLink } from "react-router-dom";
@@ -7,6 +7,17 @@ import SaveButton from "../../components/admin/SaveButton";
 
 const StudyMaterial = () => {
   const [videoTitle, setVideoTitle] = useState("");
+  const [selectedSubject, setSelectedSubject] = useState("All Courses");
+  const [selectedTopic, setSelectedTopic] = useState("Topic 1");
+
+  const subjects = [
+    "All Courses",
+    "Maths Methods",
+    "Year 12 Physics",
+    "Specialist Maths",
+    "Marketing",
+  ];
+  const topics = ["Topic 1", "Topic 2", "Topic 3", "Topic 4", "Topic 5"];
 
   const handleSave = () => {
     const formData = {
@@ -16,140 +27,150 @@ const StudyMaterial = () => {
   };
 
   return (
-    <div className="p-6">
+    <div className="px-4 py-6 sm:p-10">
       <div>
-        <h1 className=" text-primary-heading font-poppins text-[2rem] font-semibold mb-2">
+        <h1 className="text-primary-heading font-poppins text-[1.5rem] sm:text-[2rem] font-semibold mb-2">
           Study Material
         </h1>
-        <p className=" text-pale_sky font-inter text-base mb-8">
-          Lorem ipsum dolor sit amet consectetur. Urna magna magna convallis
-          tincidunt
+        <p className="text-pale_sky font-inter text-sm sm:text-base mb-8">
+          Lorem ipsum dolor sit amet consectetur. Volutpat sit vestibulum
+          molestie.
         </p>
       </div>
-      <div className="flex">
-        {/* Left Sidebar */}
-        <div className="flex">
+
+      <div className="flex flex-col sm:flex-row">
+        {/* Subject and Topic Dropdowns for Mobile */}
+        <div className="sm:hidden mb-8">
+          {/* Subjects Dropdown (Mobile Only) */}
+          <label className="block text-sm font-semibold text-ebony_clay font-inter mb-2">
+            Select Subject
+          </label>
+          <select
+            value={selectedSubject}
+            onChange={(e) => setSelectedSubject(e.target.value)}
+            className="w-full px-4 py-2 mb-4 border border-primary-blue bg-athens_gray rounded-md focus:outline-none"
+          >
+            {subjects.map((subject, index) => (
+              <option key={index} value={subject}>
+                {subject}
+              </option>
+            ))}
+          </select>
+
+          {/* Topics Dropdown (Mobile Only) */}
+          <label className="block text-sm font-semibold text-ebony_clay font-inter mb-2">
+            Select Topic
+          </label>
+          <select
+            value={selectedTopic}
+            onChange={(e) => setSelectedTopic(e.target.value)}
+            className="w-full px-4 py-2 mb-4 border border-primary-blue bg-athens_gray rounded-md focus:outline-none"
+          >
+            {topics.map((topic, index) => (
+              <option key={index} value={topic}>
+                {topic}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        {/* Subjects and Topics List for Desktop */}
+        <div className="hidden sm:flex flex-col sm:flex-row">
           {/* Subject List */}
-          <aside className="px-8 border-r border-mercury">
-            <h3 className=" text-gray_chateau font-inter text-sm font-medium mb-4 pt-4">
+          <aside className="mb-8 sm:mb-0 sm:px-8 sm:border-r border-mercury">
+            <h3 className="text-gray_chateau font-inter text-sm font-medium mb-4">
               Subjects
             </h3>
             <ul className="space-y-4">
-              <li>
-                <NavLink className="p-2 rounded text-dove_gray text-sm font-medium whitespace-nowrap">
-                  All Courses
-                </NavLink>
-              </li>
-              <li>
-                <NavLink className="p-2 rounded text-dove_gray text-sm font-medium whitespace-nowrap">
-                  Maths Methods
-                </NavLink>
-              </li>
-              <li>
-                <NavLink className="p-2 rounded text-dove_gray text-sm font-medium whitespace-nowrap">
-                  Year 12 physics
-                </NavLink>
-              </li>
-              <li>
-                <NavLink className="p-2 rounded text-dove_gray text-sm font-medium whitespace-nowrap">
-                  Specialist maths
-                </NavLink>
-              </li>
-              <li>
-                <NavLink className="p-2 rounded text-dove_gray text-sm font-medium whitespace-nowrap">
-                  Marketing
-                </NavLink>
-              </li>
+              {subjects.map((subject, index) => (
+                <li key={index}>
+                  <NavLink className="p-2 rounded text-dove_gray text-sm font-medium whitespace-nowrap">
+                    {subject}
+                  </NavLink>
+                </li>
+              ))}
             </ul>
           </aside>
 
           {/* Topic List */}
-          <aside className="px-8 border-r border-mercury">
-            <h3 className=" text-gray_chateau font-inter text-sm font-medium mb-4 pt-4">
+          <aside className="sm:px-8 sm:border-r border-mercury">
+            <h3 className="text-gray_chateau font-inter text-sm font-medium mb-4">
               Maths Methods
             </h3>
             <ul className="space-y-4">
-              <li>
-                <NavLink className="p-2 rounded text-dove_gray text-sm font-medium whitespace-nowrap">
-                  Topic
-                </NavLink>
-              </li>
-              <li>
-                <NavLink className="p-2 rounded text-dove_gray text-sm font-medium whitespace-nowrap">
-                  Topic
-                </NavLink>
-              </li>
-              <li>
-                <NavLink className="p-2 rounded text-dove_gray text-sm font-medium whitespace-nowrap">
-                  Topic
-                </NavLink>
-              </li>
-              <li>
-                <NavLink className="p-2 rounded text-dove_gray text-sm font-medium whitespace-nowrap">
-                  Topic
-                </NavLink>
-              </li>
-              <li>
-                <NavLink className="p-2 rounded text-dove_gray text-sm font-medium whitespace-nowrap">
-                  Topic
-                </NavLink>
-              </li>
+              {topics.map((topic, index) => (
+                <li key={index}>
+                  <NavLink className="p-2 rounded text-dove_gray text-sm font-medium whitespace-nowrap">
+                    {topic}
+                  </NavLink>
+                </li>
+              ))}
             </ul>
           </aside>
         </div>
 
         {/* Right Content Section */}
-        <div className="w-[35rem] ml-8">
-          <div className="flex items-stretch mb-4">
+        <div className="w-full sm:w-[35rem] sm:ml-8">
+          {/* Material Name and Add Button */}
+          <div className="flex flex-col sm:flex-row items-center mb-4 mt-4 sm:mt-0">
             <input
               type="text"
-              id="deleteCourse"
+              id="materialName"
               placeholder="Enter Material Name"
-              className="flex-grow px-5 py-3 text-primary-heading font-inter text-base border border-primary-blue bg-athens_gray rounded-md focus:outline-none"
+              className="w-full px-4 py-3 text-primary-heading font-inter text-sm sm:text-base border border-primary-blue bg-athens_gray rounded-md focus:outline-none mb-4 sm:mb-0"
             />
             <button
               type="button"
-              className="ml-2 bg-black text-white px-4 py-3 rounded-md hover:bg-gray-800"
+              className="w-full sm:w-[50%] ml-0 sm:ml-2 bg-black text-white px-4 py-3 rounded-md hover:bg-gray-800 flex items-center justify-center gap-1"
             >
-              + Add New Material
+              <AiOutlinePlus size={18} /> <span>Add New Material</span>
             </button>
           </div>
-          {/* Additional image or video */}
-          <div className="mb-12">
-            <label className="block mb-3 text-base font-semibold text-ebony_clay font-inter">
+
+          {/* Material Upload Section */}
+          <div className="mb-4 sm:mb-12">
+            <label className="block mb-3 text-sm sm:text-base font-semibold text-ebony_clay font-inter">
               Upload Material
             </label>
 
-            {/* Video Title and Description */}
             <div className="p-4 border border-gray-300 rounded-lg shadow-sm">
               <div className="mb-2">
-                <label className="block mb-2 text-base font-semibold text-ebony_clay font-inter">
+                <label className="block mb-2 text-sm sm:text-base font-semibold text-ebony_clay font-inter">
                   Material Title
                 </label>
                 <div className="flex items-center text-gray-500">
-                  {/* Input for Video Title */}
                   <input
                     type="text"
                     value={videoTitle}
                     onChange={(e) => setVideoTitle(e.target.value)}
-                    className="p-2 bg-transparent border-none focus:border-none focus:outline-none text-sm text-gray-700"
-                    placeholder="Small description"
+                    className="w-full p-2 bg-transparent border-none focus:border-none focus:outline-none text-sm sm:text-base text-gray-700"
+                    placeholder="Enter Material Title"
                   />
-                  {/* Edit Icon */}
                   <IoPencilSharp size={16} />
                 </div>
+              </div>
+
+              <div className="mb-4">
+                <label className="block mb-2 text-sm sm:text-base font-semibold text-ebony_clay font-inter">
+                  Small Description
+                </label>
+                <textarea
+                  placeholder="Write something here..."
+                  className="w-full px-4 py-3 text-primary-heading font-inter text-sm sm:text-base border border-primary-blue bg-athens_gray rounded-md focus:outline-none"
+                />
               </div>
 
               {/* Upload Section */}
               <label
                 htmlFor="file"
-                className="mt-4 mb-4 flex flex-col items-center justify-center border-dashed border border-purple-400 p-6 "
+                className="mt-4 mb-4 flex flex-col items-center justify-center border-dashed border border-gray-400 p-6"
               >
                 <div className="text-gray-400 h-32 flex justify-center items-center">
                   <AiOutlineCloudUpload size={48} />
                 </div>
                 <input id="file" type="file" className="hidden" />
               </label>
+
               {/* Action Buttons */}
               <div className="flex justify-between">
                 <button className="bg-transparent px-4 py-2 rounded-md border text-wood_smoke font-inter text-sm font-medium">

@@ -12,29 +12,30 @@ const Pagination = ({ totalPages, currentPage, setCurrentPage }) => {
       setCurrentPage(currentPage - 1);
     }
   };
+
   return (
-    <div className="flex justify-center items-center space-x-4 mt-6">
+    <div className="flex justify-center items-center space-x-2 mt-6">
       {/* Previous Button */}
       <button
-        className={`flex justify-center items-center w-10 h-10 rounded-full border border-mystic ${
-          currentPage === 1 ? "cursor-not-allowed" : ""
+        className={`flex justify-center items-center w-10 h-10 rounded-full border transition-colors duration-200 ${
+          currentPage === 1
+            ? "cursor-not-allowed opacity-50 border-gray-300"
+            : "border-mystic hover:bg-gray-100"
         }`}
         onClick={handlePreviousPage}
         disabled={currentPage === 1}
       >
-        <span className="">
-          <img src={Arrow_Left_MD} alt="" />
-        </span>
+        <img src={Arrow_Left_MD} alt="Previous" />
       </button>
 
       {/* Page Numbers */}
       {Array.from({ length: totalPages }, (_, idx) => (
         <button
           key={idx}
-          className={`flex justify-center items-center w-10 h-10 rounded-full border text-biscay ${
+          className={`flex justify-center items-center w-10 h-10 rounded-full border text-biscay transition-colors duration-200 ${
             currentPage === idx + 1
-              ? "border-biscay bg-blue-50"
-              : "border-gray-300"
+              ? "border-biscay bg-blue-50 text-biscay"
+              : "border-gray-300 hover:bg-gray-100"
           }`}
           onClick={() => setCurrentPage(idx + 1)}
         >
@@ -46,15 +47,15 @@ const Pagination = ({ totalPages, currentPage, setCurrentPage }) => {
 
       {/* Next Button */}
       <button
-        className={`flex justify-center items-center w-10 h-10 rounded-full border border-gray-300 hover:bg-gray-100 ${
-          currentPage === totalPages ? "cursor-not-allowed" : ""
+        className={`flex justify-center items-center w-10 h-10 rounded-full border transition-colors duration-200 ${
+          currentPage === totalPages
+            ? "cursor-not-allowed opacity-50 border-gray-300"
+            : "border-mystic hover:bg-gray-100"
         }`}
         onClick={handleNextPage}
         disabled={currentPage === totalPages}
       >
-        <span className="">
-          <img src={Arrow_Left_MD} alt="" className=" rotate-180" />
-        </span>
+        <img src={Arrow_Left_MD} alt="Next" className="rotate-180" />
       </button>
     </div>
   );
