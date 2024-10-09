@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import NavbarShared from "../../components/NavbarShared";
 import searchIcon from "./../../assets/images/search-normal.svg";
 import arrowBtn from "./../../assets/images/arrow.svg";
@@ -7,6 +7,27 @@ import { levelOneData } from "../../data/forumData";
 // import arrowRight from "./../../assets/images/arrowR.svg";
 
 const Forum = () => {
+  const [LevelOneDiscussionData, setLevelOneDiscussionData] = useState([]);
+  const [filteredData, setFilteredData] = useState([]);
+
+  useEffect(() => {
+    setLevelOneDiscussionData(levelOneData);
+    setFilteredData(levelOneData);
+  }, []);
+  // search related
+  const [searchInput, setSearchInput] = useState("");
+
+  const handleSearch = (e) => {
+    const query = e.target.value.toLowerCase();
+    setSearchInput(query);
+
+    const filter = LevelOneDiscussionData?.filter((discussion) =>
+      discussion?.topic?.toLowerCase().includes(query)
+    );
+
+    setFilteredData(filter)
+  };
+  
   // for filter
   const [toggleDiscussion, setToggleDiscussion] = useState(false);
   const [discussionSelected, setDiscussionSelected] =
@@ -46,7 +67,8 @@ const Forum = () => {
                 name=""
                 placeholder="Search discussion"
                 className="border border-[#DFE4EA] text-secondary-text rounded-2xl py-3 pl-12 pr-4 outline-none"
-                id=""
+                value={searchInput}
+                onChange={handleSearch}
               />
             </div>
 
@@ -115,7 +137,7 @@ const Forum = () => {
               </thead>
               {/* body */}
               <tbody>
-                {levelOneData.map((item, index) => (
+                {filteredData?.map((item, index) => (
                   <tr
                     key={index}
                     className={`hover:bg-[#3758F90D] border-b border-gray-200 cursor-pointer`}
