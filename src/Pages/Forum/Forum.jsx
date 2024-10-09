@@ -27,13 +27,13 @@ const Forum = () => {
 
     setFilteredData(filter)
   };
-  
+
   // for filter
-  const [toggleDiscussion, setToggleDiscussion] = useState(false);
-  const [discussionSelected, setDiscussionSelected] =
+  const [toggleDropdown, setToggleDropdown] = useState(false);
+  const [optionSelected, setOptionSelected] =
     useState("Recently Active");
 
-  const discussions = [
+  const options = [
     "Recent Discussions",
     "Popular Topics",
     "Trending Now",
@@ -75,29 +75,29 @@ const Forum = () => {
             {/* filter */}
             <div className="relative">
               <div
-                onClick={() => setToggleDiscussion(!toggleDiscussion)}
+                onClick={() => setToggleDropdown(!toggleDropdown)}
                 className="flex item-center gap-4 border py-3 px-4 border-[#DFE4EA] rounded-2xl cursor-pointer"
               >
-                <span>{discussionSelected}</span>
+                <span>{optionSelected}</span>
                 <img
                   src={arrowBtn}
                   alt="arrow btn"
                   className={`duration-200 transition-transform ease-in-out ${
-                    toggleDiscussion ? "rotate-180" : "rotate-0"
+                    toggleDropdown ? "rotate-180" : "rotate-0"
                   }`}
                 />
               </div>
 
               {/* dropdown options */}
-              {toggleDiscussion && (
+              {toggleDropdown && (
                 <div className="absolute mt-2 flex flex-col bg-white w-full top-12 right-0 p-3 gap-2 rounded-2xl border border-[#DFE4EA] z-10">
-                  {discussions.map((discussion, index) => (
+                  {options.map((discussion, index) => (
                     <span
                       className="cursor-pointer"
                       key={index}
                       onClick={() => {
-                        setDiscussionSelected(discussion);
-                        setToggleDiscussion(false);
+                        setOptionSelected(discussion);
+                        setToggleDropdown(false);
                       }}
                     >
                       {discussion}
