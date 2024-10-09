@@ -24,6 +24,7 @@ import StudyMaterial from "../pages/Study Material/StudyMaterial";
 import AdminPanel from "../pages/Admin Panel/AdminPanel";
 import VideoSolution from "../pages/Video Solution/VideoSolution";
 import Forum from "../Pages/Forum/Forum";
+import ForumLevelTwo from "../Pages/Forum/Forum level 2/ForumLevelTwo";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -116,6 +117,10 @@ export const router = createBrowserRouter([
       {
         path: "/profile/forum",
         element: <Forum></Forum>,
+      },
+      {
+        path: "/profile/forum/level-2/:id",
+        element: <ForumLevelTwo></ForumLevelTwo>,
       },
       {
         // 404 not found

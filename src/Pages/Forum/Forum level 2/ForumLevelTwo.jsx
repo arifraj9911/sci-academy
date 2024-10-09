@@ -1,21 +1,23 @@
+import { levelTwoData } from "../../../data/forumData";
 import { useEffect, useState } from "react";
-import NavbarShared from "../../components/NavbarShared";
-import searchIcon from "./../../assets/images/search-normal.svg";
-import arrowBtn from "./../../assets/images/arrow.svg";
-import CommunityLeaderboard from "./Community Experts Leaderboard/CommunityLeaderboard";
-import { levelOneData } from "../../data/forumData";
-import { useNavigate } from "react-router-dom";
-// import arrowRight from "./../../assets/images/arrowR.svg";
+import searchIcon from "./../../../assets/images/search-normal.svg";
+import arrowBtn from "./../../../assets/images/arrow.svg";
+import CommunityLeaderboard from "../Community Experts Leaderboard/CommunityLeaderboard";
+import NavbarShared from "../../../components/NavbarShared";
+import { useParams } from "react-router-dom";
 
-const Forum = () => {
-  const navigate = useNavigate();
-  const [LevelOneDiscussionData, setLevelOneDiscussionData] = useState([]);
+const ForumLevelTwo = () => {
+  const params = useParams();
+  const { id } = params;
+
+  const [LevelTwoDiscussionData, setLevelTwoDiscussionData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
 
   useEffect(() => {
-    setLevelOneDiscussionData(levelOneData);
-    setFilteredData(levelOneData);
-  }, []);
+    setLevelTwoDiscussionData(levelTwoData[id]);
+    setFilteredData(levelTwoData[id]);
+  }, [id]);
+
   // search related
   const [searchInput, setSearchInput] = useState("");
 
@@ -23,7 +25,7 @@ const Forum = () => {
     const query = e.target.value.toLowerCase();
     setSearchInput(query);
 
-    const filter = LevelOneDiscussionData?.filter((discussion) =>
+    const filter = LevelTwoDiscussionData?.filter((discussion) =>
       discussion?.topic?.toLowerCase().includes(query)
     );
 
@@ -41,12 +43,6 @@ const Forum = () => {
     "New Arrivals",
     "Most Commented",
   ];
-
-  // handle row click 
-  const handleRowClick = (id) =>{
-    navigate(`/profile/forum/level-2/${id}`)
-  }
-
   return (
     <div>
       {/* nav */}
@@ -122,7 +118,7 @@ const Forum = () => {
       <section className="flex gap-6">
         {/* left - discussions */}
         <div className="w-3/4">
-          <h3 className="text-xl font-semibold mb-7">Discussion : Level 1</h3>
+          <h3 className="text-xl font-semibold mb-7">Discussion : Level 2</h3>
           {/* table */}
           <div className="overflow-x-auto rounded-2xl shadow-md border border-gray-200">
             <table className="min-w-full ">
@@ -145,12 +141,10 @@ const Forum = () => {
               <tbody>
                 {filteredData?.map((item, index) => (
                   <tr
-                    onClick={()=>handleRowClick(item?.id)}
                     key={index}
                     className={`hover:bg-[#3758F90D] border-b border-gray-200 cursor-pointer`}
                   >
-                    <td className="px-6 py-3">
-                      {item.topic}</td>
+                    <td className="px-6 py-3">{item.topic}</td>
                     <td className="px-6 py-3">{item.threads}</td>
                     <td className="px-6 py-3">{item.posts}</td>
                     <td className="px-6 py-3 flex items-center">
@@ -176,4 +170,4 @@ const Forum = () => {
   );
 };
 
-export default Forum;
+export default ForumLevelTwo;
