@@ -3,7 +3,7 @@
 
 export const createMember = async (memberData) => {
   try {
-    const response = await fetch(`/scienceacademyapi/v1/auth/signup`, {
+    const response = await fetch(`http://104.248.122.19:5001/scienceacademyapi/v1/auth/signup`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
