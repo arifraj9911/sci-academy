@@ -90,7 +90,7 @@ const ChangePassword = () => {
           value="Change Password"
           className="mt-[22px] w-full h-[50px] bg-[#1A416A] rounded-md font-medium text-white hover:bg-[#1A416A] hover:font-semibold cursor-pointer transition-all ease-in-out duration-300"
         />
-        {error && <p className="text-red-400 text-sm">{error}</p>}
+        {error && <p className="text-red-400 text-sm mt-2">{error}</p>}
       </form>
     </div>
   );

@@ -160,7 +160,7 @@ const Signin = () => {
               placeholder="Email"
               className="w-full py-3 px-5 outline-none focus:ring-1 ring-[#3758F9] border border-[#DFE4EA] rounded-md"
             />
-            {emailError && <p className="text-red-400 text-sm">{emailError}</p>}
+            {emailError && <p className="text-red-400 text-sm mt-1">{emailError}</p>}
           </div>
 
           {/* password */}
@@ -171,7 +171,7 @@ const Signin = () => {
               placeholder="Password"
               className="mt-[22px] w-full py-3 px-5 outline-none focus:ring-1 ring-[#3758F9] border border-[#DFE4EA] rounded-md"
             />
-            {passError && <p className="text-red-400 text-sm">{passError}</p>}
+            {passError && <p className="text-red-400 text-sm mt-1">{passError}</p>}
           </div>
           {/* submit button */}
           <input
