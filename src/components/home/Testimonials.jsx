@@ -5,9 +5,9 @@ import op2 from "../../assets/op2.png";
 
 const Testimonials = () => {
   return (
-    <div className="py-[64px] lg:py-[150px]">
+    <div className="pb-[64px] md:pb-[0px] md:py-[64px] lg:py-[150px]">
       <div className="lg:flex justify-center lg:gap-[270px] lg:mt-[55px]">
-        <div className="block lg:hidden text-[20px] font-['Poppins'] mt-[50px] mb-[16px] px-[16px] lg:px-[0px]">
+        <div className="block lg:hidden text-[20px] font-['Poppins'] mt-[50px] mb-[40px] px-[16px] lg:px-[0px]">
           <h1>What others are saying...</h1>
         </div>
         <div className="hidden lg:block lg:text-[40px] font-['Poppins'] font-medium leading-[40px]">

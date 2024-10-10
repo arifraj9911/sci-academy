@@ -12,7 +12,7 @@ const Home = () => {
       <Header />
       <WhyChooseUs />
       <div className="w-full bg-zircon">
-        <div className="mt-[9.38rem] max-w-screen-desktop mx-auto">
+        <div className="md:mt-[9.38rem] max-w-screen-desktop mx-auto">
           <Courses />
           <div>
             <Pricing />

@@ -64,26 +64,27 @@ const sliderData = [
       "Lorem ipsum dolor sit amet consectetur. Non aenean nunc nunc mi porttitor molestie molestie nec id. Tristique massa mi arcu fringilla at mattis felis.",
   },
 ];
+
 const Courses = () => {
   return (
-    <div className="pt-[9rem] pb-[5.5rem]">
+    <div className="px-[20px] md:px-[20px] pt-[3rem] md:pt-[9rem] pb-[4rem] md:pb-[5.5rem]">
       <p className=" text-primary-heading font-poppins text-base">
         Lorem ipsum dolor{" "}
       </p>
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-4 mt-2">
-          <h2 className=" text-primary-heading font-poppins text-[2rem] font-semibold capitalize">
+      <div className="md:flex items-center justify-between">
+        <div className="flex items-center justify-between md:justify-normal md:gap-4 mt-2">
+          <h2 className=" text-primary-heading font-poppins text-[24px] md:text-[2rem] font-semibold capitalize">
             Explore Courses
           </h2>
           <Link className=" text-boulder underline text-base font-poppins">
             View All
           </Link>
         </div>
-        <form action="" className=" relative">
+        <form action="" className="mt-[20px] md:mt-[0px] relative">
           <input
             type="text"
             placeholder="Search courses"
-            className="w-[23.25rem] rounded-[0.93rem] bg-white py-5 px-6 outline-none border-none"
+            className="w-[80%] md:w-[23.25rem] rounded-[0.93rem] bg-white py-3 md:py-5 px-4 md:px-6 outline-none border-none"
           />
           <CiSearch
             className="absolute right-6 top-1/2 -translate-y-1/2"
@@ -96,11 +97,25 @@ const Courses = () => {
       {/* cards  */}
       <div className="relative mt-10">
         <Swiper
-          slidesPerView={3}
-          spaceBetween={24}
+          slidesPerView={1}
+          spaceBetween={16}
           navigation={{
             nextEl: ".custom-next",
             prevEl: ".custom-prev",
+          }}
+          breakpoints={{
+            640: {
+              slidesPerView: 1.5,
+              spaceBetween: 16,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 24,
+            },
           }}
           loop
           modules={[Navigation]}
@@ -109,7 +124,7 @@ const Courses = () => {
           {sliderData.map((item, index) => (
             <SwiperSlide
               key={index}
-              className=" rounded-[1.875rem] bg-white p-6"
+              className="rounded-[1.875rem] bg-white p-6"
             >
               <div className=" bg-sky_blue rounded-[1.25rem] flex items-center justify-center relative p-12 h-[24.3125rem]">
                 <img src={item.image} alt="" />
@@ -123,14 +138,14 @@ const Courses = () => {
               </div>
               <div className="flex items-center justify-between mt-12">
                 <div>
-                  <h4 className=" text-primary-heading font-poppins text-2xl font-semibold capitalize">
+                  <h4 className=" text-primary-heading font-poppins text-[18px] md:text-2xl font-semibold capitalize">
                     {item.title}
                   </h4>
-                  <p className=" text-primary-blue font-poppins text-base font-semibold capitalize mt-2">
+                  <p className=" text-primary-blue font-poppins text-base font-semibold capitalize mt-1 md:mt-2">
                     +{item.totalStudents}
                   </p>
                 </div>
-                <Link className="py-4 px-6 rounded-2xl border border-primary-heading bg-white">
+                <Link className="py-2 md:py-4 px-2 text-[12px] md:text-[16px] md:px-6 rounded-xl md:rounded-2xl border border-primary-heading bg-white">
                   Explore Course
                 </Link>
               </div>
@@ -141,10 +156,10 @@ const Courses = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className="custom-prev absolute -left-24 top-1/2 transform -translate-y-1/2 flex items-center justify-center rounded-full z-10 cursor-pointer shadow-lg">
+        <div className="w-[50px] md:w-[64] md:h-[64] custom-prev absolute left-[2%] md:-left-24 top-1/3 md:top-1/2 transform -translate-y-1/2 flex items-center justify-center rounded-full z-10 cursor-pointer shadow-lg">
           <img src={left} alt="" />
         </div>
-        <div className="custom-next absolute -right-24 top-1/2 transform -translate-y-1/2 flex items-center justify-center rounded-full z-10 cursor-pointer shadow-lg">
+        <div className="w-[50px] md:w-[64] md:h-[64] custom-next absolute right-[2%] md:-right-24 top-1/3 md:top-1/2 transform -translate-y-1/2 flex items-center justify-center rounded-full z-10 cursor-pointer shadow-lg">
           <img src={right} alt="" />
         </div>
       </div>
