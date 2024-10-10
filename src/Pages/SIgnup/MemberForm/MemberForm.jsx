@@ -1,21 +1,31 @@
 import { useState } from "react";
+import Swal from "sweetalert2";
+import { createMember } from "../server-action/CreateSignUp";
 
 const MemberForm = () => {
   const [formPage, setFormPage] = useState(1);
   const [formError, setFormError] = useState("");
+  const [ formSuccess, setFormSuccess ] = useState(false);
   const [formData, setFormData] = useState({
-    fullName: "",
-    familyName: "",
-    dateOfBirth: "",
+    firstname: "",
+    lastname: "",
+    date_of_birth: "",
     address: "",
     email: "",
-    parentsEmail1: "",
-    parentsEmail2: "",
-    school: "",
-    yearLevel: "",
+    parent_mail_one: "",
+    parent_mail_two: "",
+    school_name: "",
+    year_level: "",
     username: "",
     password: "",
-    secretQuestion: "",
+    secret_question: "",
+    secret_question_answer: "",
+    user_type: "",
+    gender: "",
+    mobile_no: "",
+    bio: "",
+    avatar: "",
+        
   });
 
   const handleInputChange = (e) => {
@@ -23,9 +33,52 @@ const MemberForm = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async(event) => {
     event.preventDefault();
     console.log(formData); // You can handle the final submit here
+
+    try {
+      const response = await createMember(formData);
+
+      setFormSuccess(true);
+      Swal.fire({
+        title: "Sign up successful!",
+        text: "Your account has been created.",
+        icon: "success",
+        confirmButtonText: "OK"
+      })
+
+      setFormData({
+        firstname: "",
+        lastname: "",
+        date_of_birth: "",
+        address: "",
+        email: "",
+        parent_mail_one: "",
+        parent_mail_two: "",
+        school_name: "",
+        year_level: "",
+        username: "",
+        password: "",
+        secret_question: "",
+        secret_question_answer: "",
+        user_type: "",
+        gender: "",
+        mobile_no: "",
+        bio: "",
+        avatar: "",
+      });
+    }
+
+    catch (error) {
+      console.error("Error submitting the form:", error);
+      Swal.fire({
+        title: "Error!",
+        text: "Failed to create an account.",
+        icon: "error",
+        confirmButtonText: "OK"
+      })
+    }
   };
 
   const validateStep = () => {
@@ -36,9 +89,9 @@ const MemberForm = () => {
     if (formPage === 1) {
       // Check if any field in step 1 is empty
       isMissingField =
-        !formData.fullName ||
-        !formData.familyName ||
-        !formData.dateOfBirth ||
+        !formData.firstname ||
+        !formData.lastname ||
+        !formData.date_of_birth ||
         !formData.email ||
         !formData.parentsEmail1;
     } else if (formPage === 2) {
@@ -100,55 +153,74 @@ const MemberForm = () => {
         {/* form page 1: Personal Information */}
         {formPage === 1 && (
           <div className="space-y-2">
-            {/* full name and family name */}
+            {/* first name and last name */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4">
               <div>
                 <label className="font-medium md:font-semibold">
-                  Full Name*
+                  First Name*
                 </label>
                 <input
                   type="text"
-                  name="fullName"
-                  value={formData.fullName}
+                  name="firstname"
+                  value={formData.firstname}
                   onChange={handleInputChange}
-                  placeholder="Enter your full name"
+                  placeholder="Enter your First name"
                   className="w-full text-sm md:text-base px-4 py-2 border rounded-lg bg-[#F3F4F6] mt-1 outline-none focus:ring-1"
                   required
                 />
               </div>
               <div>
                 <label className="font-medium md:font-semibold">
-                  Family Name*
+                  Last Name*
                 </label>
                 <input
                   type="text"
-                  name="familyName"
-                  value={formData.familyName}
+                  name="lastname"
+                  value={formData.lastname}
                   onChange={handleInputChange}
-                  placeholder="Enter your family name"
+                  placeholder="Enter your last name"
                   className="w-full text-sm md:text-base px-4 py-2 border rounded-lg bg-[#F3F4F6] mt-1 outline-none focus:ring-1"
                   required
                 />
               </div>
             </div>
-
-            {/* date of birth */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4">
+              {/* date of birth */}
+            <div>
+              <label className="font-medium md:font-semibold">
+                Phone Number*
+              </label>
+              <input
+                type="number"
+                name="mobile_no"
+                value={formData.mobile_no}
+                placeholder="Enter your Phone Number"
+                onChange={handleInputChange}
+                className="w-full text-sm md:text-base px-4 py-2 border rounded-lg bg-[#F3F4F6] mt-1 outline-none focus:ring-1"
+                required
+              />
+            </div>
+              
             <div>
               <label className="font-medium md:font-semibold">
                 Date of Birth*
               </label>
               <input
                 type="date"
-                name="dateOfBirth"
-                value={formData.dateOfBirth}
+                name="date_of_birth"
+                value={formData.date_of_birth}
                 onChange={handleInputChange}
                 className="w-full text-sm md:text-base px-4 py-2 border rounded-lg bg-[#F3F4F6] mt-1 outline-none focus:ring-1"
                 required
               />
             </div>
+            </div>
+
+            
 
             {/* address -> optional */}
-            <div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4">
+              <div>
               <label className="font-medium md:font-semibold">Address</label>
               <input
                 type="text"
@@ -159,6 +231,22 @@ const MemberForm = () => {
                 className="w-full text-sm md:text-base px-4 py-2 border rounded-lg bg-[#F3F4F6] mt-1 outline-none focus:ring-1"
               />
             </div>
+              <div>
+                <label className="font-medium md:font-semibold">
+                  Gender*
+                </label>
+                <input
+                  type="text"
+                  name="gender"
+                  value={formData.gender}
+                  onChange={handleInputChange}
+                  placeholder="Enter your last name"
+                  className="w-full text-sm md:text-base px-4 py-2 border rounded-lg bg-[#F3F4F6] mt-1 outline-none focus:ring-1"
+                  required
+                />
+              </div>
+            </div>
+            
 
             {/* email */}
             <div>
@@ -181,8 +269,8 @@ const MemberForm = () => {
               </label>
               <input
                 type="email"
-                name="parentsEmail1"
-                value={formData.parentsEmail1}
+                name="parent_mail_one"
+                value={formData.parent_mail_one}
                 onChange={handleInputChange}
                 placeholder="Enter your parent's email"
                 className="w-full text-sm md:text-base px-4 py-2 border rounded-lg bg-[#F3F4F6] mt-1 outline-none focus:ring-1"
@@ -197,8 +285,8 @@ const MemberForm = () => {
               </label>
               <input
                 type="email"
-                name="parentsEmail2"
-                value={formData.parentsEmail2}
+                name="parent_mail_two"
+                value={formData.parent_mail_two}
                 onChange={handleInputChange}
                 placeholder="Enter another parent's email (optional)"
                 className="w-full text-sm md:text-base px-4 py-2 border rounded-lg bg-[#F3F4F6] mt-1 outline-none focus:ring-1"
@@ -212,11 +300,11 @@ const MemberForm = () => {
           <div className="space-y-2">
             {/* school */}
             <div>
-              <label className="font-medium md:font-semibold">School*</label>
+              <label className="font-medium md:font-semibold">School Name*</label>
               <input
                 type="text"
-                name="school"
-                value={formData.school}
+                name="school_name"
+                value={formData.school_name}
                 onChange={handleInputChange}
                 placeholder="Enter your school"
                 className="w-full text-sm md:text-base px-4 py-2 border rounded-lg bg-[#F3F4F6] mt-1 outline-none focus:ring-1"
@@ -231,8 +319,8 @@ const MemberForm = () => {
               </label>
               <input
                 type="text"
-                name="yearLevel"
-                value={formData.yearLevel}
+                name="year_level"
+                value={formData.year_level}
                 onChange={handleInputChange}
                 placeholder="Enter your year level"
                 className="w-full text-sm md:text-base px-4 py-2 border rounded-lg bg-[#F3F4F6] mt-1 outline-none focus:ring-1"
@@ -274,7 +362,39 @@ const MemberForm = () => {
                 required
               />
             </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4">
+              <div>
+                <label className="font-medium md:font-semibold">
+                  Secret Question*
+                </label>
+                <input
+                  type="text"
+                  name="secret_question"
+                  value={formData.secret_question}
+                  onChange={handleInputChange}
+                  placeholder="Enter your secret question"
+                  className="w-full text-sm md:text-base px-4 py-2 border rounded-lg bg-[#F3F4F6] mt-1 outline-none focus:ring-1"
+                  required
+                />
+              </div>
+              <div>
+                <label className="font-medium md:font-semibold">
+                  Secret Question Answer*
+                </label>
+                <input
+                  type="text"
+                  name="secret_question_answer"
+                  value={formData.secret_question_answer}
+                  onChange={handleInputChange}
+                  placeholder="Enter your secret question answer"
+                  className="w-full text-sm md:text-base px-4 py-2 border rounded-lg bg-[#F3F4F6] mt-1 outline-none focus:ring-1"
+                  required
+                />
+              </div>
+            </div>
           </div>
+          
         )}
 
         {/* buttons */}
