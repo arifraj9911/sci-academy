@@ -1,14 +1,79 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "./../../assets/images/Sign-in/Science Academy Logo 1.svg";
+import Swal from "sweetalert2";
+import { useState } from "react";
 // import { useContext } from "react";
 // import { AuthContext } from "../../provider/AuthProvider";
 // import Swal from "sweetalert2";
 
 const Signin = () => {
-  // const navigate = useNavigate();
+  const [emailError, setEmailError] = useState("");
+  const [passError, setPassError] = useState("");
+  const navigate = useNavigate();
   // const location = useLocation();
 
   // const { loginUser, googleSignin, facebookSignin } = useContext(AuthContext);
+
+  const signIn = async (email, password) => {
+    try {
+      const response = await fetch(
+        "http://104.248.122.19:5001/scienceacademyapi/v1/auth/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-type": "application/json",
+          },
+          body: JSON.stringify({ email, password }),
+        }
+      );
+
+      // Parse the response data
+      const data = await response.json();
+      console.log("Response Data:", data);
+
+      // Clear previous error messages
+      setEmailError("");
+      setPassError("");
+
+      // Check if the response status is not OK (indicating an error)
+      if (!response.ok) {
+        // Handle email-related errors
+        if (data.errors && data.errors.email) {
+          setEmailError(data.errors.email);
+        }
+        // Handle password-related errors or generic errors
+        if (data.message) {
+          if (data.message.toLowerCase().includes("email")) {
+            setEmailError(data.message); // Set email error if message mentions email
+          } else if (data.message.toLowerCase().includes("credentials")) {
+            setPassError(data.message); // Set password error if message mentions credentials
+          }
+        }
+        return; // Stop further execution in case of error
+      }
+
+      if (data.success) {
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "login successful",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+
+        // Store the token in localStorage
+        localStorage.setItem("authToken", data.payload.token);
+
+        setEmailError("");
+        setPassError("");
+        navigate("/user/home");
+        console.log(data);
+      }
+    } catch (error) {
+      // Display the error message
+      console.error("Error:", error.message);
+    }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -16,6 +81,8 @@ const Signin = () => {
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
+
+    signIn(email, password);
 
     // loginUser(email, password)
     //   .then((res) => {
@@ -76,7 +143,7 @@ const Signin = () => {
   // };
   return (
     <div className="bg-[#F7F8FA] min-h-screen flex items-center justify-center">
-      <div className="w-[90%] md:w-[520px] md:h-[646px] border bg-white rounded-lg shadow-sm p-5 md:p-[60px] font-inter">
+      <div className="w-[90%] md:w-[520px] md:h-[546px] border bg-white rounded-lg shadow-sm p-5 md:p-[60px] font-inter">
         {/* img/logo */}
         {/* <img className="mb-[68px]" src={logo} alt="logo" /> */}
         <div className="flex flex-col items-center gap-5 pb-5">
@@ -86,20 +153,26 @@ const Signin = () => {
         {/* form */}
         <form onSubmit={handleSubmit}>
           {/* email */}
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            className="w-full py-3 px-5 outline-none focus:ring-1 ring-[#3758F9] border border-[#DFE4EA] rounded-md"
-          />
+          <div>
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              className="w-full py-3 px-5 outline-none focus:ring-1 ring-[#3758F9] border border-[#DFE4EA] rounded-md"
+            />
+            {emailError && <p className="text-red-400 text-sm mt-1">{emailError}</p>}
+          </div>
 
           {/* password */}
-          <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            className="mt-[22px] w-full py-3 px-5 outline-none focus:ring-1 ring-[#3758F9] border border-[#DFE4EA] rounded-md"
-          />
+          <div>
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              className="mt-[22px] w-full py-3 px-5 outline-none focus:ring-1 ring-[#3758F9] border border-[#DFE4EA] rounded-md"
+            />
+            {passError && <p className="text-red-400 text-sm mt-1">{passError}</p>}
+          </div>
           {/* submit button */}
           <input
             type="submit"
@@ -110,14 +183,14 @@ const Signin = () => {
 
         {/* connect with google, twitter, fb */}
         {/* connect with line */}
-        <div className="flex items-center justify-center mt-6 md:mt-9">
+        {/* <div className="flex items-center justify-center mt-6 md:mt-9">
           <div className="border-t border-gray-300 flex-grow"></div>
           <span className="mx-4 text-[#8899A8]">Connect With</span>
           <div className="border-t border-gray-300 flex-grow"></div>
-        </div>
+        </div> */}
         {/* buttons */}
         <div className="my-5 md:my-8">
-        {/* <div className="grid grid-cols-3 gap-5 my-8"> */}
+          {/* <div className="grid grid-cols-3 gap-5 my-8"> */}
           {/* facebook */}
           {/* <button
             // onClick={handleFacebookLogin}
@@ -152,7 +225,7 @@ const Signin = () => {
             </svg>
           </button> */}
           {/* Google */}
-          <button
+          {/* <button
             // onClick={handleGoogleLogin}
             className="bg-[#D64937] rounded-md flex items-center justify-center h-[45px] w-full"
           >
@@ -175,7 +248,7 @@ const Signin = () => {
                 </clipPath>
               </defs>
             </svg>
-          </button>
+          </button> */}
         </div>
 
         {/* forget pw and not a member */}
