@@ -3,66 +3,121 @@ import { useState } from "react";
 const MemberForm = () => {
   const [formPage, setFormPage] = useState(1);
   const [formError, setFormError] = useState("");
+  // const [formData, setFormData] = useState({
+  //   fullName: "",
+  //   familyName: "",
+  //   dateOfBirth: "",
+  //   address: "",
+  //   email: "",
+  //   parentsEmail1: "",
+  //   parentsEmail2: "",
+  //   school: "",
+  //   yearLevel: "",
+  //   username: "",
+  //   password: "",
+  //   secretQuestion: "",
+  // });
   const [formData, setFormData] = useState({
     fullName: "",
+    firstname: "arif",
+    lastname: "raj",
     familyName: "",
-    dateOfBirth: "",
+    date_of_birth: "",
     address: "",
     email: "",
-    parentsEmail1: "",
-    parentsEmail2: "",
-    school: "",
-    yearLevel: "",
+    parent_email_one: "",
+    parent_email_two: "",
+    student: {
+      avatar: "",
+      bio: "",
+      academic_info: [
+        {
+          school_name: "",
+          year_level: "",
+        },
+      ],
+    },
+
+    gender: "male",
     username: "",
     password: "",
-    secretQuestion: "",
+    secret_question: "Birthplace",
+    secret_question_answer: "Comillapri",
+    mobile_no: "1234567890",
+    user_type: "student",
   });
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
+    console.log(value);
     setFormData({ ...formData, [name]: value });
+  };
+
+  const signUp = async () => {
+    try {
+      const response = await fetch(
+        "http://104.248.122.19:5001/scienceacademyapi/v1/auth/signup",
+        {
+          method: "POST",
+          headers: {
+            "Content-type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      const data = await response.json();
+
+      console.log(data);
+    } catch (error) {
+      console.log(error.message);
+    }
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
     console.log(formData); // You can handle the final submit here
+
+    signUp();
   };
 
-  const validateStep = () => {
-    // General validation for the current step
-    let isValid = true;
-    let isMissingField = false;
+  // const validateStep = () => {
+  //   // General validation for the current step
+  //   let isValid = true;
+  //   let isMissingField = false;
 
-    if (formPage === 1) {
-      // Check if any field in step 1 is empty
-      isMissingField =
-        !formData.fullName ||
-        !formData.familyName ||
-        !formData.dateOfBirth ||
-        !formData.email ||
-        !formData.parentsEmail1;
-    } else if (formPage === 2) {
-      // Check if any field in step 2 is empty
-      isMissingField = !formData.school || !formData.yearLevel;
-    } else if (formPage === 3) {
-      // Check if any field in step 3 is empty
-      isMissingField = !formData.username || !formData.password;
-    }
+  //   if (formPage === 1) {
+  //     // Check if any field in step 1 is empty
+  //     isMissingField =
+  //       !formData.fullName ||
+  //       !formData.familyName ||
+  //       !formData.dateOfBirth ||
+  //       !formData.email ||
+  //       !formData.parentsEmail1;
+  //   } else if (formPage === 2) {
+  //     // Check if any field in step 2 is empty
+  //     isMissingField = !formData.school || !formData.yearLevel;
+  //   } else if (formPage === 3) {
+  //     // Check if any field in step 3 is empty
+  //     isMissingField = !formData.username || !formData.password;
+  //   }
 
-    if (isMissingField) {
-      setFormError("Please fill out all required fields.");
-      isValid = false;
-    } else {
-      setFormError("");
-    }
+  //   if (isMissingField) {
+  //     setFormError("Please fill out all required fields.");
+  //     isValid = false;
+  //   } else {
+  //     setFormError("");
+  //   }
 
-    return isValid;
-  };
+  //   return isValid;
+  // };
 
   const handleNext = () => {
-    if (validateStep()) {
-      setFormPage(formPage + 1);
-    }
+    // if (validateStep()) {
+    //   setFormPage(formPage + 1);
+    // }
+    setFormPage(formPage + 1);
   };
   const progressValue = (formPage / 4) * 100;
   return (
@@ -139,8 +194,8 @@ const MemberForm = () => {
               </label>
               <input
                 type="date"
-                name="dateOfBirth"
-                value={formData.dateOfBirth}
+                name="date_of_birth"
+                value={formData.date_of_birth}
                 onChange={handleInputChange}
                 className="w-full text-sm md:text-base px-4 py-2 border rounded-lg bg-[#F3F4F6] mt-1 outline-none focus:ring-1"
                 required
@@ -181,8 +236,8 @@ const MemberForm = () => {
               </label>
               <input
                 type="email"
-                name="parentsEmail1"
-                value={formData.parentsEmail1}
+                name="parent_email_one"
+                value={formData.parent_email_one}
                 onChange={handleInputChange}
                 placeholder="Enter your parent's email"
                 className="w-full text-sm md:text-base px-4 py-2 border rounded-lg bg-[#F3F4F6] mt-1 outline-none focus:ring-1"
@@ -197,8 +252,8 @@ const MemberForm = () => {
               </label>
               <input
                 type="email"
-                name="parentsEmail2"
-                value={formData.parentsEmail2}
+                name="parent_email_two"
+                value={formData.parent_email_two}
                 onChange={handleInputChange}
                 placeholder="Enter another parent's email (optional)"
                 className="w-full text-sm md:text-base px-4 py-2 border rounded-lg bg-[#F3F4F6] mt-1 outline-none focus:ring-1"
@@ -215,8 +270,8 @@ const MemberForm = () => {
               <label className="font-medium md:font-semibold">School*</label>
               <input
                 type="text"
-                name="school"
-                value={formData.school}
+                name="school_name"
+                value={formData.school_name}
                 onChange={handleInputChange}
                 placeholder="Enter your school"
                 className="w-full text-sm md:text-base px-4 py-2 border rounded-lg bg-[#F3F4F6] mt-1 outline-none focus:ring-1"
@@ -231,8 +286,8 @@ const MemberForm = () => {
               </label>
               <input
                 type="text"
-                name="yearLevel"
-                value={formData.yearLevel}
+                name="year_level"
+                value={formData.year_level}
                 onChange={handleInputChange}
                 placeholder="Enter your year level"
                 className="w-full text-sm md:text-base px-4 py-2 border rounded-lg bg-[#F3F4F6] mt-1 outline-none focus:ring-1"
