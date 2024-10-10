@@ -24,6 +24,7 @@ import StudyMaterial from "../pages/Study Material/StudyMaterial";
 import AdminPanel from "../pages/Admin Panel/AdminPanel";
 import VideoSolution from "../pages/Video Solution/VideoSolution";
 import Forum from "../Pages/Forum/Forum";
+import ChangePassword from "../components/changePassword";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -32,6 +33,10 @@ export const router = createBrowserRouter([
   {
     path: "/user/home",
     element: <UserLanding></UserLanding>,
+  },
+  {
+    path: "/change-password",
+    element: <ChangePassword></ChangePassword>,
   },
   {
     path: "/profile",
