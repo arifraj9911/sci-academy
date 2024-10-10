@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const MemberForm = () => {
+  const navigate = useNavigate();
   const [formPage, setFormPage] = useState(1);
   const [formError, setFormError] = useState("");
   const [formData, setFormData] = useState({
@@ -93,6 +95,7 @@ const MemberForm = () => {
           text: "You have successfully registered!",
           confirmButtonText: "OK",
         });
+        navigate("/user/home");
       } else {
         // Show an error alert if there is an error
         Swal.fire({
@@ -160,7 +163,9 @@ const MemberForm = () => {
           <div className="space-y-2">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4">
               <div>
-                <label className="font-medium md:font-semibold">First Name*</label>
+                <label className="font-medium md:font-semibold">
+                  First Name*
+                </label>
                 <input
                   type="text"
                   name="firstname"
@@ -172,7 +177,9 @@ const MemberForm = () => {
                 />
               </div>
               <div>
-                <label className="font-medium md:font-semibold">Last Name*</label>
+                <label className="font-medium md:font-semibold">
+                  Last Name*
+                </label>
                 <input
                   type="text"
                   name="lastname"
@@ -187,7 +194,9 @@ const MemberForm = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4">
               <div>
-                <label className="font-medium md:font-semibold">Mobile No*</label>
+                <label className="font-medium md:font-semibold">
+                  Mobile No*
+                </label>
                 <input
                   type="text"
                   name="mobile_no"
@@ -199,7 +208,9 @@ const MemberForm = () => {
                 />
               </div>
               <div>
-                <label className="font-medium md:font-semibold">Date of Birth*</label>
+                <label className="font-medium md:font-semibold">
+                  Date of Birth*
+                </label>
                 <input
                   type="date"
                   name="date_of_birth"
@@ -266,7 +277,9 @@ const MemberForm = () => {
                 />
               </div>
               <div>
-                <label className="font-medium md:font-semibold">Parent Email Two</label>
+                <label className="font-medium md:font-semibold">
+                  Parent Email Two
+                </label>
                 <input
                   type="email"
                   name="parent_email_two"
@@ -284,7 +297,9 @@ const MemberForm = () => {
         {formPage === 2 && (
           <div className="space-y-2">
             <div>
-              <label className="font-medium md:font-semibold">School Name*</label>
+              <label className="font-medium md:font-semibold">
+                School Name*
+              </label>
               <input
                 type="text"
                 name="school_name"
@@ -309,7 +324,9 @@ const MemberForm = () => {
               />
             </div>
             <div>
-              <label className="font-medium md:font-semibold">Year Level*</label>
+              <label className="font-medium md:font-semibold">
+                Year Level*
+              </label>
               <input
                 type="text"
                 name="year_level"
