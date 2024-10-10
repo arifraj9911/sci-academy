@@ -1,10 +1,13 @@
 import { useState } from "react";
 import cardImg from "./../../../assets/images/membership pricing/card-pos.svg";
 import masterCardImg from "./../../../assets/images/membership pricing/Mastercard.svg";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { GrStatusGood } from "react-icons/gr";
 
 const PaymentForm = () => {
+  const location = useLocation();
+  const { selectedPlan, allPricingData } = location.state || {};
+  console.log(selectedPlan)
   const [emailOption, setEmailOption] = useState("account");
 
   const handleSubmit = (e) => {

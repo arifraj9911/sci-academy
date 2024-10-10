@@ -1,11 +1,18 @@
+import { useEffect, useState } from "react";
 import MembershipPricing from "../Shared/Membership Pricing/MembershipPricing";
+import UnsubscribeModal from "../Shared/Membership Pricing/UnsubscribeModal";
 
 const Membership = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const currentSubscription = ''
+  const onClose = () => {
+    setIsModalOpen(false);
+  };
+
+  const currentSubscription = "";
 
   return (
-    <div className="max-w-screen-desktop mx-auto px-5 font-poppins">
+    <div className="max-w-screen-desktop mx-auto  md:px-5 font-poppins">
       {/* top heading */}
       <section className="py-3">
         <h3 className="font-semibold text-primary-blue ">Pricing Table</h3>
@@ -18,10 +25,28 @@ const Membership = () => {
         </p>
       </section>
 
-      {/* pricing component */}
-      <section className="mt-8">
-        <MembershipPricing currentSubscription={currentSubscription}></MembershipPricing>
+      <section className="mt-4">
+        <div className="flex justify-end mb-5 md:mb-8">
+          {/* unsubscribe button */}
+          <button
+            onClick={() => setIsModalOpen(true)}
+            className="px-6 h-[56px] bg-[#FEEBEB] text-[#F04545] font-medium rounded-2xl"
+          >
+            Unsubscribe current plan
+          </button>
+        </div>
+
+        {/* pricing component */}
+        <MembershipPricing></MembershipPricing>
       </section>
+
+      {/* modal */}
+      {isModalOpen && (
+        <UnsubscribeModal
+          onClose={onClose}
+          currentSubscription={currentSubscription}
+        ></UnsubscribeModal>
+      )}
     </div>
   );
 };
