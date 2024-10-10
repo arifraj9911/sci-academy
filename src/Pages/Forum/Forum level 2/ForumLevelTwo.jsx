@@ -4,11 +4,12 @@ import searchIcon from "./../../../assets/images/search-normal.svg";
 import arrowBtn from "./../../../assets/images/arrow.svg";
 import CommunityLeaderboard from "../Community Experts Leaderboard/CommunityLeaderboard";
 import NavbarShared from "../../../components/NavbarShared";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const ForumLevelTwo = () => {
   const params = useParams();
   const { id } = params;
+  const navigate = useNavigate();
 
   const [LevelTwoDiscussionData, setLevelTwoDiscussionData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
@@ -43,6 +44,11 @@ const ForumLevelTwo = () => {
     "New Arrivals",
     "Most Commented",
   ];
+
+  // handle row click
+  const handleRowClick = (topic_id) => {
+    navigate(`/profile/forum/discussion/${topic_id}`);
+  };
   return (
     <div>
       {/* nav */}
@@ -141,6 +147,7 @@ const ForumLevelTwo = () => {
               <tbody>
                 {filteredData?.map((item, index) => (
                   <tr
+                    onClick={() => handleRowClick(item?.topic_id)}
                     key={index}
                     className={`hover:bg-[#3758F90D] border-b border-gray-200 cursor-pointer`}
                   >
