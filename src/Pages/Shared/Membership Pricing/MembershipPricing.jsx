@@ -9,7 +9,7 @@ const MembershipPricing = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://104.248.122.19:5001/scienceacademyapi/v1/pricing-plan/all")
+    fetch("/scienceacademyapi/v1/pricing-plan/all")
       .then((res) => res.json())
       .then((data) => setAllPricingData(data.payload.services));
   }, []);

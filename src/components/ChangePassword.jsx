@@ -8,7 +8,7 @@ const ChangePassword = () => {
   const changePassword = async (currentPass, newPass, token, form) => {
     try {
       const response = await fetch(
-        "http://104.248.122.19:5001/scienceacademyapi/v1/auth/password/change",
+        "/scienceacademyapi/v1/auth/password/change",
         {
           method: "POST",
           headers: {
