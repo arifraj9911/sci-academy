@@ -111,11 +111,11 @@ const Discussions = () => {
       <section>
         <h1 className="text-[32px] font-semibold">Discussion</h1>
         {/* short desc and search/filter */}
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-y-4">
           <p className="text-[#637381]">Join the Science Academy community</p>
 
           {/* search and filter */}
-          <div className="flex items-center justify-end gap-5">
+          <div className="flex flex-col md:items-center md:justify-end gap-5">
             {/* search */}
             <div className="relative">
               <img
@@ -127,7 +127,7 @@ const Discussions = () => {
                 type="text"
                 name=""
                 placeholder="Search discussion"
-                className="border border-[#DFE4EA] text-secondary-text rounded-2xl py-3 pl-12 pr-4 outline-none"
+                className="border border-[#DFE4EA] text-secondary-text rounded-2xl py-3 pl-12 pr-4 outline-none w-full md:w-auto"
                 value={searchInput}
                 onChange={handleSearch}
               />
@@ -171,7 +171,7 @@ const Discussions = () => {
         </div>
       </section>
 
-      <hr className="my-10" />
+      <hr className="my-6 md:my-10" />
 
       {/* main */}
 
@@ -179,10 +179,10 @@ const Discussions = () => {
         {filteredData?.map((data) => (
           <div
             key={data.id}
-            className="border p-8 rounded-3xl border-[#DFE4EA] font-poppins hover:bg-[#3758F91A] transition-all duration-200 hover:border-[#3758F9]"
+            className="border p-4 md:p-8 rounded-3xl border-[#DFE4EA] font-poppins hover:bg-[#3758F91A] transition-all duration-200 hover:border-[#3758F9]"
           >
             {/* user image/name and discussion action buttons */}
-            <div className="flex items-center justify-between">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between flex-wrap gap-y-2">
               {/* user */}
               <div className="flex items-center gap-3">
                 <img
@@ -192,48 +192,56 @@ const Discussions = () => {
                 />
                 <h3 className="text-[#3758F9]">{data?.user_name}</h3>
               </div>
-              {/* actions */}
-              <div className="flex gap-6 items-center">
+              {/* actions for desktop */}
+              <div className="md:flex gap-x-4 md:gap-x-6 gap-y-2 items-center flex-wrap hidden">
                 {/* like */}
-                <div className="flex gap-2 items-center">
-                  <img className="cursor-pointer" src={likeIcon} alt="like" />
-                  <p>{data?.likes}</p>
+                <div className="flex gap-1 md:gap-2 items-center">
+                  <img
+                    className="cursor-pointer w-4 md:w-auto"
+                    src={likeIcon}
+                    alt="like"
+                  />
+                  <p className="text-sm md:text-base">{data?.likes}</p>
                 </div>
 
                 {/* replies */}
-                <div className="flex gap-2 items-center">
+                <div className="flex gap-1 md:gap-2 items-center">
                   <img
-                    className="cursor-pointer"
+                    className="cursor-pointer w-4 md:w-auto"
                     src={replyIcon}
                     alt="replies"
                   />
-                  <p>{data?.replies}</p>
+                  <p className="text-sm md:text-base">{data?.replies}</p>
                 </div>
 
                 {/* views */}
-                <div className="flex gap-2 items-center">
-                  <img className="cursor-pointer" src={viewIcon} alt="views" />
-                  <p>{data?.views}</p>
+                <div className="flex gap-1 md:gap-2 items-center">
+                  <img
+                    className="cursor-pointer w-4 md:w-auto"
+                    src={viewIcon}
+                    alt="views"
+                  />
+                  <p className="text-sm md:text-base">{data?.views}</p>
                 </div>
 
                 {/* shareable */}
                 <div>
                   {data?.shareable == true && (
-                    <div className="flex gap-2 items-center">
+                    <div className="flex gap-1 md:gap-2 items-center">
                       <img
-                        className="cursor-pointer"
+                        className="cursor-pointer w-4 md:w-auto"
                         src={shareIcon}
                         alt="like"
                       />
-                      <p>Share</p>
+                      <p className="text-sm md:text-base">Share</p>
                     </div>
                   )}
                 </div>
 
                 {/* archive */}
-                <div className="ml-5">
+                <div className="md:ml-5">
                   <img
-                    className="cursor-pointer"
+                    className="cursor-pointer w-4 md:w-auto"
                     src={archiveIcon}
                     alt="archive"
                   />
@@ -242,7 +250,7 @@ const Discussions = () => {
                 {/* options */}
                 <div className="relative">
                   <img
-                    className="cursor-pointer"
+                    className="cursor-pointer w-4 md:w-auto"
                     src={menuIcon}
                     alt="options"
                     onClick={(e) => {
@@ -305,6 +313,112 @@ const Discussions = () => {
                 <h3 className="font-medium">{data?.title}</h3>
                 {/* description */}
                 <p className="text-[#637381] mt-4">{data?.content}</p>
+              </div>
+            </div>
+
+            {/* actions - for mobile*/}
+            <div className="md:hidden gap-x-3 md:gap-x-6 gap-y-2 items-center justify-center flex-wrap flex mt-3">
+              {/* like */}
+              <div className="flex gap-1 md:gap-2 items-center">
+                <img
+                  className="cursor-pointer w-4 md:w-auto"
+                  src={likeIcon}
+                  alt="like"
+                />
+                <p className="text-sm md:text-base">{data?.likes}</p>
+              </div>
+
+              {/* replies */}
+              <div className="flex gap-1 md:gap-2 items-center">
+                <img
+                  className="cursor-pointer w-4 md:w-auto"
+                  src={replyIcon}
+                  alt="replies"
+                />
+                <p className="text-sm md:text-base">{data?.replies}</p>
+              </div>
+
+              {/* views */}
+              <div className="flex gap-1 md:gap-2 items-center">
+                <img
+                  className="cursor-pointer w-4 md:w-auto"
+                  src={viewIcon}
+                  alt="views"
+                />
+                <p className="text-sm md:text-base">{data?.views}</p>
+              </div>
+
+              {/* shareable */}
+              <div>
+                {data?.shareable == true && (
+                  <div className="flex gap-1 md:gap-2 items-center">
+                    <img
+                      className="cursor-pointer w-4 md:w-auto"
+                      src={shareIcon}
+                      alt="like"
+                    />
+                    <p className="text-sm md:text-base">Share</p>
+                  </div>
+                )}
+              </div>
+
+              {/* archive */}
+              <div className="md:ml-5">
+                <img
+                  className="cursor-pointer w-4 md:w-auto"
+                  src={archiveIcon}
+                  alt="archive"
+                />
+              </div>
+
+              {/* options */}
+              <div className="relative">
+                <img
+                  className="cursor-pointer w-4 md:w-auto"
+                  src={menuIcon}
+                  alt="options"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setShowMenu(showMenu === data.id ? null : data.id);
+                  }}
+                />
+                {showMenu === data.id && (
+                  <div
+                    ref={showMenuRef}
+                    className="absolute z-10 w-[200px] p-4 mt-5 bg-[white] -left-[180px] rounded-2xl bottom-0 md:bottom-auto"
+                  >
+                    <ul>
+                      {/* edit */}
+                      <li
+                        onClick={() => handleEdit(data.id)}
+                        className="py-2.5 px-4 cursor-pointer rounded-xl text-sm hover:font-medium text-[#637381] hover:text-black hover:bg-[#F3F4F6] "
+                      >
+                        Edit
+                      </li>
+                      {/* delete */}
+                      <li
+                        onClick={() => handleDelete(data.id)}
+                        className="py-2.5 px-4 cursor-pointer rounded-xl text-sm hover:font-medium text-[#637381] hover:text-black hover:bg-[#F3F4F6] "
+                      >
+                        Delete
+                      </li>
+                      {/* Report */}
+                      <li
+                        onClick={() => handleReport(data.id)}
+                        className="py-2.5 px-4 cursor-pointer rounded-xl text-sm hover:font-medium text-[#637381] hover:text-black hover:bg-[#F3F4F6] "
+                      >
+                        Report
+                      </li>
+                      {/* Block */}
+                      <li
+                        onClick={() => handleBlock(data.id)}
+                        className="py-2.5 px-4 cursor-pointer rounded-xl text-sm hover:font-medium text-[#637381] hover:text-black hover:bg-[#F3F4F6] "
+                      >
+                        Block
+                      </li>
+                    </ul>
+                  </div>
+                )}
               </div>
             </div>
           </div>

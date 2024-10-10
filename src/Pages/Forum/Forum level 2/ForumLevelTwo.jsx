@@ -58,11 +58,11 @@ const ForumLevelTwo = () => {
       <section>
         <h1 className="text-[32px] font-semibold">Discussion</h1>
         {/* short desc and search/filter */}
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-y-4">
           <p className="text-[#637381]">Join the Science Academy community</p>
 
           {/* search and filter */}
-          <div className="flex items-center justify-end gap-5">
+          <div className="flex flex-col md:items-center md:justify-end gap-5">
             {/* search */}
             <div className="relative">
               <img
@@ -74,7 +74,7 @@ const ForumLevelTwo = () => {
                 type="text"
                 name=""
                 placeholder="Search discussion"
-                className="border border-[#DFE4EA] text-secondary-text rounded-2xl py-3 pl-12 pr-4 outline-none"
+                className="border border-[#DFE4EA] text-secondary-text rounded-2xl py-3 pl-12 pr-4 outline-none w-full md:w-auto"
                 value={searchInput}
                 onChange={handleSearch}
               />
@@ -84,7 +84,7 @@ const ForumLevelTwo = () => {
             <div className="relative">
               <div
                 onClick={() => setToggleDropdown(!toggleDropdown)}
-                className="flex item-center gap-4 border py-3 px-4 border-[#DFE4EA] rounded-2xl cursor-pointer"
+                className="flex item-center gap-4 border py-3 px-4 border-[#DFE4EA] rounded-2xl cursor-pointer justify-between md:justify-normal"
               >
                 <span>{optionSelected}</span>
                 <img
@@ -118,27 +118,31 @@ const ForumLevelTwo = () => {
         </div>
       </section>
 
-      <hr className="my-10" />
+      <hr className="my-6 md:my-10" />
 
       {/* main section */}
-      <section className="flex gap-6">
+      <section className="flex flex-col md:flex-row gap-10 md:gap-6">
         {/* left - discussions */}
-        <div className="w-3/4">
-          <h3 className="text-xl font-semibold mb-7">Discussion : Level 2</h3>
+        <div className="w-full md:w-3/4">
+          <h3 className="text-xl font-semibold mb-6 md:mb-7">
+            Discussion : Level 2
+          </h3>
           {/* table */}
           <div className="overflow-x-auto rounded-2xl shadow-md border border-gray-200">
             <table className="min-w-full ">
               {/* head */}
               <thead>
                 <tr className=" border-b border-gray-200">
-                  <th className="text-left px-6 py-3.5 text-gray-600">
+                  <th className="text-left px-4 md:px-6 py-3.5 text-gray-600">
                     Topics
                   </th>
-                  <th className="text-left px-6 py-3.5 text-gray-600">
+                  <th className="text-left px-4 md:px-6 py-3.5 text-gray-600 hidden md:block">
                     Threads
                   </th>
-                  <th className="text-left px-6 py-3.5 text-gray-600">Posts</th>
-                  <th className="text-left px-6 py-3.5 text-gray-600">
+                  <th className="text-left px-4 md:px-6 py-3.5 text-gray-600">
+                    Posts
+                  </th>
+                  <th className="text-left px-4 md:px-6 py-3.5 text-gray-600">
                     Last Post By
                   </th>
                 </tr>
@@ -151,10 +155,16 @@ const ForumLevelTwo = () => {
                     key={index}
                     className={`hover:bg-[#3758F90D] border-b border-gray-200 cursor-pointer`}
                   >
-                    <td className="px-6 py-3">{item.topic}</td>
-                    <td className="px-6 py-3">{item.threads}</td>
-                    <td className="px-6 py-3">{item.posts}</td>
-                    <td className="px-6 py-3 flex items-center">
+                    <td className="px-4 md:px-6 py-3 text-sm md:text-base">
+                      {item.topic}
+                    </td>
+                    <td className="px-4 md:px-6 py-3 hidden md:block md:text-base">
+                      {item.threads}
+                    </td>
+                    <td className="px-4 md:px-6 py-3 text-sm md:text-base">
+                      {item.posts}
+                    </td>
+                    <td className="px-4 md:px-6 py-3 flex items-center md:text-base">
                       <img
                         src={item.lastPostBy.avatar}
                         alt={item.lastPostBy.name}
