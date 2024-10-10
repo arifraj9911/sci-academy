@@ -13,15 +13,15 @@ const CommunityLeaderboard = () => {
       {/* image */}
       <div className="relative">
         <img className="w-full" src={communityBg} alt="community background" />
-        <h3 className="absolute bottom-6 left-8 max-w-[240px] text-white text-2xl font-semibold leading-8">
+        <h3 className="absolute bottom-6 left-8 max-w-[240px] text-white text-xl md:text-2xl font-semibold leading-8">
           Community Experts Leaderboard
         </h3>
       </div>
       {/* top subjects */}
-      <div className="flex gap-4 items-center flex-wrap mt-10">
+      <div className="flex gap-3.5 md:gap-4 items-center flex-wrap mt-6 md:mt-10">
         {subjects?.map((subject, index) => (
           <span
-            className="border rounded-xl py-2.5 px-4 cursor-pointer"
+            className="border rounded-xl py-1.5 md:py-2.5 px-3.5 md:px-4 cursor-pointer text-sm md:text-base"
             key={index}
           >
             {subject}
