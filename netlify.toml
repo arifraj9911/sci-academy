@@ -1,5 +1,0 @@
-[[redirects]]
-  from = "/scienceacademyapi/*"
-  to = "http://104.248.122.19:5001/scienceacademyapi/:splat"
-  status = 200
-  force = true
