@@ -60,7 +60,7 @@ const Forum = () => {
           <p className="text-[#637381]">Join the Science Academy community</p>
 
           {/* search and filter */}
-          <div className="flex flex-col md:items-center md:justify-end gap-5">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-end gap-5">
             {/* search */}
             <div className="relative">
               <img

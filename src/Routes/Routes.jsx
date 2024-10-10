@@ -26,6 +26,8 @@ import VideoSolution from "../pages/Video Solution/VideoSolution";
 import Forum from "../Pages/Forum/Forum";
 import ForumLevelTwo from "../Pages/Forum/Forum level 2/ForumLevelTwo";
 import Discussions from "../Pages/Forum/Discussions/Discussions";
+import ChangePassword from "../components/changePassword";
+import PrivateRoute from "./PrivateRoute";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -33,7 +35,11 @@ export const router = createBrowserRouter([
   },
   {
     path: "/user/home",
-    element: <UserLanding></UserLanding>,
+    element: <PrivateRoute><UserLanding></UserLanding></PrivateRoute>,
+  },
+  {
+    path: "/change-password",
+    element: <ChangePassword></ChangePassword>,
   },
   {
     path: "/profile",
