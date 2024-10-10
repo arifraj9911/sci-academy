@@ -25,8 +25,8 @@ const Membership = () => {
         </p>
       </section>
 
-      <section className="mt-6">
-        <div className="flex justify-end mb-5 md:mb-4">
+      <section className="mt-4">
+        <div className="flex justify-end mb-5 md:mb-8">
           {/* unsubscribe button */}
           <button
             onClick={() => setIsModalOpen(true)}
