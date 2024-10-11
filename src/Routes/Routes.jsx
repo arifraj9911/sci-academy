@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
-import Signup from "../Pages/SIgnup/Signup";
+// import Signup from "../Pages/SIgnup/Signup";
+import Signup from "../Pages/Signup/SignUp";
 import VideoSolutions from "../Pages/VideoSolutions/VideoSolutions";
 import Feedback from "../Pages/Feedback/Feedback";
 import About from "../Pages/About/About";
