@@ -12,15 +12,17 @@ const About = () => {
       {/* navbar end */}
 
       {/* about section */}
-      <div className="mt-3 mb-20 font-poppins w-4/5 mx-auto ">
-        <p className="text-[#3758F9] font-semibold capitalize">about us</p>
-        <h2 className="text-[40px] font-semibold text-[#111928]">
+      <div className="mt-3 mb-20 font-poppins w-full max-w-[1140px] mx-auto px-4">
+        <p className="text-[#3758F9] font-semibold capitalize text-center">
+          about us
+        </p>
+        <h2 className="text-[28px] sm:text-[40px] font-semibold text-[#111928] text-center mt-2">
           About Ramy Kozman
         </h2>
 
         {/* about text */}
-        <div className="text-secondary-text max-w-[1140px]   text-justify space-y-6 mt-4 ">
-          <p>
+        <div className="text-secondary-text text-justify space-y-4 mt-4">
+          <p className="text-sm sm:text-base">
             Lorem ipsum dolor sit amet consectetur. Mollis enim phasellus quam
             aliquam maecenas nunc vel. Fringilla scelerisque malesuada ipsum
             laoreet. Risus congue nullam vel facilisis gravida faucibus congue.
@@ -31,7 +33,7 @@ const About = () => {
             Ornare vulputate habitant parturient dui eu.
           </p>
 
-          <p>
+          <p className="text-sm sm:text-base">
             Lorem ipsum dolor sit amet consectetur. Lorem at est urna pulvinar
             sit viverra. Est quis nascetur mauris tempor platea. Euismod massa
             non ac tincidunt mauris imperdiet urna euismod dapibus. Amet a nunc
@@ -47,7 +49,7 @@ const About = () => {
             amet.
           </p>
 
-          <p>
+          <p className="text-sm sm:text-base">
             Lorem ipsum dolor sit amet consectetur. Habitant eget vitae pulvinar
             et porttitor neque convallis blandit. Purus congue at massa purus.
             Feugiat nibh venenatis dui et adipiscing eu blandit faucibus morbi.
@@ -69,11 +71,11 @@ const About = () => {
         </div>
 
         {/* social */}
-        <div className="flex gap-8 items-center mt-[90px]">
-          <img src={facebook} alt="facebook" />
-          <img src={insta} alt="insta " />
-          <img src={twitter} alt="twitter" />
-          <img src={linkedIn} alt="linkedIn" />
+        <div className="flex justify-center gap-6 items-center mt-8">
+          <img src={facebook} alt="facebook" className="sm:h-8 sm:w-8" />
+          <img src={insta} alt="instagram" className="sm:h-8 sm:w-8" />
+          <img src={twitter} alt="twitter" className="sm:h-8 sm:w-8" />
+          <img src={linkedIn} alt="linkedin" className="sm:h-8 sm:w-8" />
         </div>
       </div>
     </div>

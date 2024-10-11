@@ -35,7 +35,11 @@ export const router = createBrowserRouter([
   },
   {
     path: "/user/home",
-    element: <PrivateRoute><UserLanding></UserLanding></PrivateRoute>,
+    element: (
+      <PrivateRoute>
+        <UserLanding></UserLanding>
+      </PrivateRoute>
+    ),
   },
   {
     path: "/change-password",

@@ -20,20 +20,21 @@ const Feedback = () => {
     form.reset();
     console.log(feedbackData);
   };
+
   return (
-    <div className="mb-20 ">
+    <div className="mb-20">
       {/* navbar start */}
       <NavbarShared />
       {/* navbar end */}
 
       {/* feedback div */}
-      <div className="border p-8 rounded-3xl w-3/5 mx-auto mt-3">
+      <div className="border p-8 rounded-3xl w-full max-w-3xl mx-auto mt-3">
         {/* feedback header start */}
-        <div className="flex gap-4">
+        <div className="flex gap-4 items-start">
           <div className="border rounded-lg p-4">
             <img src={star} alt="star" />
           </div>
-          <div className=" font-poppins">
+          <div className="font-poppins">
             <h3 className="text-2xl font-semibold text-[#111928]">
               Write your own feedback
             </h3>
@@ -45,37 +46,26 @@ const Feedback = () => {
         {/* feedback header end */}
 
         {/* star rating start */}
-        <div className="mt-11 font-inter font-semibold space-y-[30px]">
-          <div className="flex justify-between items-center">
-            <span>Is the practice material helpful for your subject?</span>
-            <span className="flex gap-2 items-center">
-              <img src={starYlw} alt="star_yellow" />
-              <img src={starYlw} alt="star_yellow" />
-              <img src={starYlw} alt="star_yellow" />
-              <img src={starYlw} alt="star_yellow" />
-              <img src={starWth} alt="star_wth" />
-            </span>
-          </div>
-          <div className="flex justify-between items-center">
-            <span>Would you recommend this site to friends?</span>
-            <span className="flex gap-2 items-center">
-              <img src={starYlw} alt="star_yellow" />
-              <img src={starYlw} alt="star_yellow" />
-              <img src={starYlw} alt="star_yellow" />
-              <img src={starWth} alt="star_wth" />
-              <img src={starWth} alt="star_wth" />
-            </span>
-          </div>
-          <div className="flex justify-between items-center">
-            <span>Is the site engaging?</span>
-            <span className="flex gap-2 items-center">
-              <img src={starYlw} alt="star_yellow" />
-              <img src={starYlw} alt="star_yellow" />
-              <img src={starWth} alt="star_wth" />
-              <img src={starWth} alt="star_wth" />
-              <img src={starWth} alt="star_wth" />
-            </span>
-          </div>
+        <div className="mt-11 font-inter font-semibold space-y-6">
+          {[
+            "Is the practice material helpful for your subject?",
+            "Would you recommend this site to friends?",
+            "Is the site engaging?",
+          ].map((question, index) => (
+            <div
+              key={index}
+              className="flex flex-col sm:flex-row justify-between items-center"
+            >
+              <span>{question}</span>
+              <span className="flex gap-2 items-center mt-2 sm:mt-0">
+                <img src={starYlw} alt="star_yellow" />
+                <img src={starYlw} alt="star_yellow" />
+                <img src={index === 2 ? starWth : starYlw} alt="star_rating" />
+                <img src={index === 2 ? starWth : starYlw} alt="star_rating" />
+                <img src={starWth} alt="star_white" />
+              </span>
+            </div>
+          ))}
         </div>
         {/* star rating end */}
 
@@ -89,7 +79,7 @@ const Feedback = () => {
 
           <form onSubmit={handleFeedback} className="mt-6 flex flex-col gap-6">
             {/* name, phone */}
-            <div className="flex gap-[26px]">
+            <div className="flex flex-col sm:flex-row gap-6">
               <div className="flex flex-col gap-3 w-full">
                 <label htmlFor="name" className="text-[#1F2A37] font-semibold">
                   Name
@@ -97,8 +87,7 @@ const Feedback = () => {
                 <input
                   type="text"
                   name="name"
-                  className="p-[10px] border rounded-md border-[#DFE4EA] outline-none text-[#2B2B2B] w-full"
-                  id=""
+                  className="p-2 border rounded-md border-[#DFE4EA] outline-none text-[#2B2B2B] w-full"
                 />
               </div>
               <div className="flex flex-col gap-3 w-full">
@@ -106,10 +95,9 @@ const Feedback = () => {
                   Phone
                 </label>
                 <input
-                  type="number"
+                  type="tel"
                   name="phone"
-                  className="p-[10px] border rounded-md border-[#DFE4EA] outline-none text-[#2B2B2B] w-full"
-                  id=""
+                  className="p-2 border rounded-md border-[#DFE4EA] outline-none text-[#2B2B2B] w-full"
                 />
               </div>
             </div>
@@ -122,13 +110,12 @@ const Feedback = () => {
               <input
                 type="email"
                 name="email"
-                className="p-[10px] border rounded-md border-[#DFE4EA] outline-none text-[#2B2B2B] w-full"
-                id=""
+                className="p-2 border rounded-md border-[#DFE4EA] outline-none text-[#2B2B2B] w-full"
               />
             </div>
 
             {/* subject, country */}
-            <div className="flex gap-[26px]">
+            <div className="flex flex-col sm:flex-row gap-6">
               <div className="flex flex-col gap-3 w-full">
                 <label
                   htmlFor="subject"
@@ -139,8 +126,7 @@ const Feedback = () => {
                 <input
                   type="text"
                   name="subject"
-                  className="p-[10px] border rounded-md border-[#DFE4EA] outline-none text-[#2B2B2B] w-full"
-                  id=""
+                  className="p-2 border rounded-md border-[#DFE4EA] outline-none text-[#2B2B2B] w-full"
                 />
               </div>
               <div className="flex flex-col gap-3 w-full">
@@ -153,8 +139,7 @@ const Feedback = () => {
                 <input
                   type="text"
                   name="country"
-                  className="p-[10px] border rounded-md border-[#DFE4EA] outline-none text-[#2B2B2B] w-full"
-                  id=""
+                  className="p-2 border rounded-md border-[#DFE4EA] outline-none text-[#2B2B2B] w-full"
                 />
               </div>
             </div>
@@ -166,18 +151,17 @@ const Feedback = () => {
               </label>
               <textarea
                 name="message"
-                id=""
                 rows="4"
-                className="p-[10px] border rounded-md border-[#DFE4EA] outline-none text-[#2B2B2B] w-full"
+                className="p-2 border rounded-md border-[#DFE4EA] outline-none text-[#2B2B2B] w-full"
               ></textarea>
             </div>
 
             {/* button */}
-            <div className=" flex justify-end">
+            <div className="flex justify-end">
               <input
                 type="submit"
                 value="Send"
-                className="text-white bg-[#3758F9] py-4 px-8 rounded-2xl   "
+                className="text-white bg-[#3758F9] py-2 px-6 rounded-2xl"
               />
             </div>
           </form>
